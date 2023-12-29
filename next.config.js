@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const { withPlausibleProxy } = require("next-plausible");
 
-module.exports = nextConfig
+const nextConfig = {
+    compiler: {
+        styledComponents: true,
+    },
+    images: {
+        domains: ["images.unsplash.com", "res.cloudinary.com"],
+    },
+};
+
+module.exports = withPlausibleProxy()(nextConfig);
