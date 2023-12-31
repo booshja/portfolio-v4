@@ -1,6 +1,6 @@
 import Image from "next/image";
 import BugsBunny from "@/public/images/bugs-bunnys-no.png";
-import { WPAdminPageContainerStyled, ImageContainerStyled } from "./_pageStyled";
+import { WPAdminPageContainerStyled } from "./_pageStyled";
 import testingIds from "@/testing/testingIds";
 
 const testIds = testingIds.pages.wpAdmin;

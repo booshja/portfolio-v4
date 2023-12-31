@@ -54,9 +54,7 @@ export default {
             imageContainer: "contact-page-image-container",
             linksHeader: "contact-page-links-header",
         },
-        error: {},
         experience: {},
-        globalError: {},
         landing: {
             container: "landing-page-container",
             firstName: "landing-page-first-name",
@@ -64,7 +62,13 @@ export default {
             lastName: "landing-page-last-name",
             name: "landing-page-name",
         },
-        notFound: {},
+        notFound: {
+            container: "not-found-page-container",
+            header: "not-found-page-header",
+            image: "not-found-page-image",
+            link: "not-found-page-link",
+            text: "not-found-page-text",
+        },
         uses: {
             container: "uses-page-container",
             pageHeader: "uses-page-header",
@@ -83,7 +87,6 @@ export default {
         },
         wpAdmin: {
             container: "wp-admin-page-container",
-            imageContainer: "wp-admin-page-image-container",
             image: "wp-admin-page-image",
         },
     },
