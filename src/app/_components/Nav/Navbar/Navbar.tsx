@@ -89,6 +89,7 @@ export const Navbar = () => {
                     <Image
                         src={Mountain}
                         alt="Mountain that opens mobile menu"
+                        style={{ objectFit: "contain", width: "auto", height: "auto" }}
                         data-testid={testIds.navButtonImage}
                     />
                 </MobileNavButton>

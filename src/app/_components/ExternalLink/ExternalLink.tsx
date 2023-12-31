@@ -34,9 +34,9 @@ export const ExternalLink = ({
             {text}
             <Image
                 src={ExternalLinkImage}
+                alt="Link opens in external tab"
                 width={iconSize}
                 height={iconSize}
-                alt="Link opens in external tab"
                 style={{ objectFit: "contain" }}
                 data-testid={testIds.image}
             />

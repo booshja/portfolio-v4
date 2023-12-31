@@ -81,6 +81,10 @@ export default {
             hardwareListItem: "uses-page-hardware-list-item",
             hardwareListItemParagraph: "uses-page-hardware-list-item-paragraph",
         },
-        wpAdmin: {},
+        wpAdmin: {
+            container: "wp-admin-page-container",
+            imageContainer: "wp-admin-page-image-container",
+            image: "wp-admin-page-image",
+        },
     },
 };

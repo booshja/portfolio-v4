@@ -59,8 +59,7 @@ export default function Contact() {
                 <Image
                     src={ContactImage}
                     data-testid={testIds.image}
-                    style={{ objectFit: "contain" }}
-                    fill
+                    style={{ objectFit: "contain", width: "auto", height: "auto" }}
                     priority
                     alt="Calligraphy pen and pen lid on top of a notebook containing white pages and non-discernable black cursive writing on top of a dark-colored table."
                 />

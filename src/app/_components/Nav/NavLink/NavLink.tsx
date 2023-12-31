@@ -25,7 +25,12 @@ export const NavLink = ({
 
     return external ? (
         <ANavLinkStyled href={href} target="_blank" data-testid={testId}>
-            {text} <Image src={ExternalLink} fill alt="Link opens in external tab" />
+            {text}
+            <Image
+                src={ExternalLink}
+                alt="Link opens in external tab"
+                style={{ objectFit: "contain", width: "auto", height: "auto" }}
+            />
         </ANavLinkStyled>
     ) : (
         <NextNavLinkStyled href={href} active={isActive} data-testid={testId}>
