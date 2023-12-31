@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { PageContainerStyled } from "../LandingPageStyled";
+import { PageContainerStyled } from "../GlobalStyled";
 import { colors, lineHeight, spacing } from "@/utils/constants";
 
 export const UsesPageContainerStyled = styled(PageContainerStyled)`

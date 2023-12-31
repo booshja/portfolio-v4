@@ -9,6 +9,7 @@ interface ExternalLinkProps {
     testId: string;
     text: string;
     inline?: boolean;
+    mobileNav?: boolean;
 }
 
 const testIds = testingIds.components.externalLink;
@@ -18,21 +19,27 @@ export const ExternalLink = ({
     text,
     testId,
     inline = false,
-}: ExternalLinkProps) => (
-    <ExternalLinkStyled
-        href={href}
-        target="_blank"
-        data-testid={testId}
-        $inline={inline}
-    >
-        {text}
-        <Image
-            src={ExternalLinkImage}
-            width={spacing.md}
-            height={spacing.md}
-            alt="Link opens in external tab"
-            style={{ objectFit: "contain" }}
-            data-testid={testIds.image}
-        />
-    </ExternalLinkStyled>
-);
+    mobileNav = false,
+}: ExternalLinkProps) => {
+    const iconSize = mobileNav ? spacing.lg : spacing.md;
+
+    return (
+        <ExternalLinkStyled
+            href={href}
+            target="_blank"
+            data-testid={testId}
+            $inline={inline}
+            $mobileNav={mobileNav}
+        >
+            {text}
+            <Image
+                src={ExternalLinkImage}
+                width={iconSize}
+                height={iconSize}
+                alt="Link opens in external tab"
+                style={{ objectFit: "contain" }}
+                data-testid={testIds.image}
+            />
+        </ExternalLinkStyled>
+    );
+};

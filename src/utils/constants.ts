@@ -1,5 +1,6 @@
 export const colors = {
     background: "#444267",
+    mobileNavBackground: "#292D3E",
     link: "#FFFFFF",
     text: "#FFFFFF",
 } as const;
@@ -36,4 +37,5 @@ export const strings = {
     contactEmail: "jacob.andes@gmail.com",
     githubUrl: "https://github.com/booshja",
     linkedInUrl: "https://www.linkedin.com/in/jacobandes",
+    blogUrl: "https://importfrom.dev",
 } as const;

@@ -13,15 +13,24 @@ import { NavLink } from "../";
 import Image from "next/image";
 import Mountain from "@/public/icons/mountain-dark.svg";
 import testingIds from "@/testing/testingIds";
+import { strings } from "@/utils/constants";
+import { MobileNav } from "../MobileNav";
+import { useState, useEffect } from "react";
 
 const testIds = testingIds.components.nav.navbar;
 
 export const Navbar = () => {
     const pathname = usePathname();
 
-    const handleMobileMenuOpen = () => {
-        console.log("mobile menu open");
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+
+    const handleMobileMenuChange = () => {
+        setIsMobileMenuOpen((isOpen) => !isOpen);
     };
+
+    useEffect(() => {
+        setIsMobileMenuOpen(false);
+    }, [pathname]);
 
     return (
         <NavbarStyled data-testid={testIds.container}>
@@ -65,7 +74,7 @@ export const Navbar = () => {
                         </NavItemStyled>
                         <NavItemStyled data-testid={testIds.navItem}>
                             <NavLink
-                                href="https://importfrom.dev"
+                                href={strings.blogUrl}
                                 text="blog"
                                 testId={testIds.navLink}
                                 external
@@ -74,7 +83,7 @@ export const Navbar = () => {
                     </NavListStyled>
                 </nav>
                 <MobileNavButton
-                    onClick={handleMobileMenuOpen}
+                    onClick={handleMobileMenuChange}
                     data-testid={testIds.navButton}
                 >
                     <Image
@@ -84,6 +93,10 @@ export const Navbar = () => {
                     />
                 </MobileNavButton>
             </NavSectionStyled>
+            <MobileNav
+                isOpen={isMobileMenuOpen}
+                handleMenuClose={handleMobileMenuChange}
+            />
         </NavbarStyled>
     );
 };

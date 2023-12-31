@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { PageContainerStyled } from "../LandingPageStyled";
+import { PageContainerStyled } from "../GlobalStyled";
 import { colors, lineHeight, spacing } from "@/utils/constants";
 
 export const ContactPageContainerStyled = styled(PageContainerStyled)`
@@ -29,6 +29,9 @@ export const ExternalLinkContainerStyled = styled.div`
 
 export const ImageContainerStyled = styled.div`
     align-self: flex-end;
+    width: 250px;
+    height: 175px;
+    position: relative;
 `;
 
 export const PageHeaderFirstSpanStyled = styled.span``;

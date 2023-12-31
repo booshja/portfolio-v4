@@ -55,10 +55,7 @@ export default function Contact() {
                     />
                 </ExternalLinkContainerStyled>
             </ContactInfoContainerStyled>
-            <ImageContainerStyled
-                data-testid={testIds.imageContainer}
-                style={{ width: "250px", height: "200px", position: "relative" }}
-            >
+            <ImageContainerStyled data-testid={testIds.imageContainer}>
                 <Image
                     src={ContactImage}
                     data-testid={testIds.image}

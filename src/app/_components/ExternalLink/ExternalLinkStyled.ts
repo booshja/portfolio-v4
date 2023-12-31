@@ -1,18 +1,23 @@
 "use client";
 
-import { colors, spacing, lineHeight } from "@/utils/constants";
+import { colors, spacing, lineHeight, fontWeight } from "@/utils/constants";
 import styled from "styled-components";
 
 interface ExternalLinkStyledProps {
-    $inline?: boolean;
+    $inline: boolean;
+    $mobileNav: boolean;
 }
 
 export const ExternalLinkStyled = styled.a<ExternalLinkStyledProps>`
     display: ${({ $inline }) => ($inline ? "inline-flex" : "flex")};
     gap: ${spacing.xs}px;
     color: ${colors.link};
-    font-size: ${spacing.md}px;
-    line-height: ${lineHeight.md}px;
+    font-size: ${({ $mobileNav }) => ($mobileNav ? spacing.lg : spacing.md)}px;
+    font-weight: ${({ $mobileNav }) =>
+        $mobileNav ? fontWeight.bold : fontWeight.regular};
+    line-height: ${({ $mobileNav }) => ($mobileNav ? lineHeight.lg : lineHeight.md)}px;
     height: ${lineHeight.md}px;
     width: fit-content;
+    text-decoration: ${({ $mobileNav }) => ($mobileNav ? "none" : "underline")};
+    text-transform: ${({ $mobileNav }) => ($mobileNav ? "uppercase" : "none")};
 `;

@@ -3,7 +3,7 @@ import PlausibleProvider from "next-plausible";
 import StyledComponentsRegistry from "@/lib/registry";
 import type { Metadata } from "next";
 import "./globals.css";
-import { Copyright, Navbar } from "@/components/index";
+import { Copyright, MobileNav, Navbar } from "@/components/index";
 
 const inter = Inter({ subsets: ["latin"] });
 

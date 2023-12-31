@@ -1,18 +1,14 @@
 "use client";
 
 import { colors, spacing, lineHeight } from "@/utils/constants";
+import { PageContainerStyled } from "./GlobalStyled";
 import styled from "styled-components";
-
-export const PageContainerStyled = styled.main`
-    padding: ${spacing.lg}px;
-`;
 
 export const LandingPageStyled = styled(PageContainerStyled)`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100% - ${spacing.xxl}px);
 `;
 
 export const NameStyled = styled.h1`

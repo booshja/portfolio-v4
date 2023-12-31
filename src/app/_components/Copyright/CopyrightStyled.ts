@@ -1,12 +1,14 @@
 "use client";
 
-import { colors, fontWeight, spacing } from "@/utils/constants";
+import { colors, spacing } from "@/utils/constants";
 import styled from "styled-components";
 
 export const CopyrightFooterStyled = styled.footer`
-    position: absolute;
-    bottom: ${spacing.sm}px;
-    right: ${spacing.sm}px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: ${spacing.xl}px;
+    padding-right: ${spacing.sm}px;
 `;
 
 export const CopyrightTextStyled = styled.p`

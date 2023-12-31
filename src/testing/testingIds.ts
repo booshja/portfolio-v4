@@ -8,7 +8,15 @@ export default {
             image: "external-link-image",
         },
         nav: {
-            mobileNav: {},
+            mobileNav: {
+                container: "mobile-nav-container",
+                closingButton: "mobile-nav-closing-button",
+                logo: "mobile-nav-logo",
+                nav: "mobile-nav-nav",
+                navList: "mobile-nav-nav-list",
+                navItem: "mobile-nav-nav-item",
+                navLink: "mobile-nav-nav-link",
+            },
             navbar: {
                 container: "navbar-container",
                 logo: "navbar-logo",
@@ -22,7 +30,13 @@ export default {
             },
         },
         projectCard: {},
-        socials: {},
+        socials: {
+            container: "socials-container",
+            text: "socials-text",
+            divider: "socials-divider",
+            link: "socials-link",
+            icon: "socials-icon",
+        },
     },
     pages: {
         about: {},
