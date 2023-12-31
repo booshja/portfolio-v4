@@ -8,12 +8,23 @@ interface ExternalLinkProps {
     href: string;
     testId: string;
     text: string;
+    inline?: boolean;
 }
 
 const testIds = testingIds.components.externalLink;
 
-export const ExternalLink = ({ href, text, testId }: ExternalLinkProps) => (
-    <ExternalLinkStyled href={href} target="_blank" data-testid={testId}>
+export const ExternalLink = ({
+    href,
+    text,
+    testId,
+    inline = false,
+}: ExternalLinkProps) => (
+    <ExternalLinkStyled
+        href={href}
+        target="_blank"
+        data-testid={testId}
+        $inline={inline}
+    >
         {text}
         <Image
             src={ExternalLinkImage}

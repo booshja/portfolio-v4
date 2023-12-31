@@ -14,12 +14,17 @@ export const ContactInfoContainerStyled = styled.div`
     display: flex;
     flex-direction: column;
     gap: ${spacing.sm}px;
+
+    & > button {
+        margin-left: ${spacing.md}px;
+    }
 `;
 
 export const ExternalLinkContainerStyled = styled.div`
     display: flex;
     flex-direction: column;
-    gap: ${spacing.sm}px;
+    gap: ${spacing.md}px;
+    padding-left: ${spacing.md}px;
 `;
 
 export const ImageContainerStyled = styled.div`

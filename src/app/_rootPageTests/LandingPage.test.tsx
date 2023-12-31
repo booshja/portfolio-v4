@@ -1,13 +1,12 @@
-import { renderServerComponent } from "@/lib/renderServerComponent";
-import { screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import testingIds from "@/testing/testingIds";
-import LandingPage from "./page";
+import LandingPage from "../page";
 
 const testIds = testingIds.pages.landing;
 
 describe("Landing Page", () => {
-    it("should correctly render the landing page", async () => {
-        await renderServerComponent(<LandingPage />);
+    it("should correctly render the landing page", () => {
+        render(<LandingPage />);
 
         expect(screen.getByTestId(testIds.container)).toBeInTheDocument();
         expect(screen.getByTestId(testIds.name)).toBeInTheDocument();
