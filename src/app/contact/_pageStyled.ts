@@ -32,6 +32,7 @@ export const ImageContainerStyled = styled.div`
     width: 250px;
     height: 175px;
     position: relative;
+    margin-top: ${spacing.sm}px;
 `;
 
 export const PageHeaderFirstSpanStyled = styled.span``;

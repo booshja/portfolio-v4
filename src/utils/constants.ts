@@ -1,5 +1,6 @@
 export const colors = {
     background: "#444267",
+    cardBackground: "#8D95C4",
     mobileNavBackground: "#292D3E",
     link: "#FFFFFF",
     text: "#FFFFFF",
