@@ -39,7 +39,21 @@ export default {
         },
     },
     pages: {
-        about: {},
+        about: {
+            container: "about-page-container",
+            greetingHeader: "about-page-greeting-header",
+            greetingText: "about-page-greeting-text",
+            header: "about-page-header",
+            headerSpan: "about-page-header-span",
+            image: "about-page-image",
+            imageContainer: "about-page-image-container",
+            skillList: "about-page-skill-list",
+            skillListItem: "about-page-skill-list-item",
+            skillListItemText: "about-page-skill-list-item-text",
+            skillsHeader: "about-page-skills-header",
+            skillUsageHeader: "about-page-skill-usage-header",
+            textContainer: "about-page-text-container",
+        },
         contact: {
             contactInfoContainer: "contact-page-contact-info-container",
             contactInfoHeader: "contact-page-contact-info-header",
