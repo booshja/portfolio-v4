@@ -1,11 +1,35 @@
 "use client";
 
-import testingIds from "@/testing/testingIds";
+import { ANavLinkStyled, NextNavLinkStyled } from "./NavLinkStyled";
+import ExternalLink from "@/public/icons/external-link.svg";
+import Image from "next/image";
 
-interface NavLinkProps {}
+interface NavLinkProps {
+    href: string;
+    text: string;
+    testId: string;
+    pathname?: string;
+    external?: boolean;
+}
 
-const testIds = testingIds.components.nav.navLink;
+export const NavLink = ({
+    href,
+    text,
+    testId,
+    pathname,
+    external = false,
+}: NavLinkProps) => {
+    const activePath = pathname?.split("/")[1];
+    const activeText = text.split("/")[0];
+    const isActive = activePath === activeText ? "true" : "false";
 
-export const NavLink = () => {
-    return <div></div>;
+    return external ? (
+        <ANavLinkStyled href={href} target="_blank" data-testid={testId}>
+            {text} <Image src={ExternalLink} fill alt="Link opens in external tab" />
+        </ANavLinkStyled>
+    ) : (
+        <NextNavLinkStyled href={href} active={isActive} data-testid={testId}>
+            {text}
+        </NextNavLinkStyled>
+    );
 };
