@@ -37,21 +37,33 @@ export const ProjectCard = ({
         if (codeLink && liveLink) {
             return (
                 <>
-                    <ExternalLink href={codeLink} text="Code" testId="" />
+                    <ExternalLink
+                        href={codeLink}
+                        text="Code"
+                        testId={testIds.codeLink}
+                    />
                     {" | "}
-                    <ExternalLink href={liveLink} text="Live" testId="" />
+                    <ExternalLink
+                        href={liveLink}
+                        text="Live"
+                        testId={testIds.liveLink}
+                    />
                 </>
             );
         } else if (codeLink && !liveLink) {
-            return <ExternalLink href={codeLink} text="Code" testId="" />;
+            return (
+                <ExternalLink href={codeLink} text="Code" testId={testIds.codeLink} />
+            );
         } else if (liveLink) {
-            return <ExternalLink href={liveLink} text="Live" testId="" />;
+            return (
+                <ExternalLink href={liveLink} text="Live" testId={testIds.liveLink} />
+            );
         }
     };
 
     return (
-        <CardStyled data-testid="">
-            <ImageSectionStyled data-testid="">
+        <CardStyled data-testid={testIds.container}>
+            <ImageSectionStyled data-testid={testIds.imageSection}>
                 <Image
                     // src={imageLink}
                     src={TempImage}
@@ -63,26 +75,39 @@ export const ProjectCard = ({
                         boxShadow:
                             "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
                     }}
-                    data-testid=""
+                    data-testid={testIds.image}
                 />
             </ImageSectionStyled>
-            <TextSectionStyled data-testid="">
-                <HeaderSectionStyled $reverse={reverseAlignment} data-testid="">
-                    <PositionStyled data-testid="">0{position}</PositionStyled>
-                    <NameStyled $reverse={reverseAlignment} data-testid="">
+            <TextSectionStyled data-testid={testIds.textSection}>
+                <HeaderSectionStyled
+                    $reverse={reverseAlignment}
+                    data-testid={testIds.headerSection}
+                >
+                    <PositionStyled data-testid={testIds.position}>
+                        0{position}
+                    </PositionStyled>
+                    <NameStyled $reverse={reverseAlignment} data-testid={testIds.name}>
                         {name}
                     </NameStyled>
                 </HeaderSectionStyled>
                 {type === "job" ? (
-                    <JobTitleStyled $reverse={reverseAlignment} data-testid="">
+                    <JobTitleStyled
+                        $reverse={reverseAlignment}
+                        data-testid={testIds.jobTitle}
+                    >
                         {title}
                     </JobTitleStyled>
                 ) : (
-                    <LinkSectionStyled $reverse={reverseAlignment} data-testid="">
+                    <LinkSectionStyled
+                        $reverse={reverseAlignment}
+                        data-testid={testIds.linkSection}
+                    >
                         {linkLine()}
                     </LinkSectionStyled>
                 )}
-                <DescriptionStyled data-testid="">{description}</DescriptionStyled>
+                <DescriptionStyled data-testid={testIds.description}>
+                    {description}
+                </DescriptionStyled>
             </TextSectionStyled>
         </CardStyled>
     );

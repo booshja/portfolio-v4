@@ -7,8 +7,10 @@ const testIds = testingIds.pages.experience;
 
 export default function Experience() {
     return (
-        <ExpPageContainerStyled data-testid="">
-            <ExpPageHeaderStyled data-testid="">Experience</ExpPageHeaderStyled>
+        <ExpPageContainerStyled data-testid={testIds.container}>
+            <ExpPageHeaderStyled data-testid={testIds.header}>
+                Experience
+            </ExpPageHeaderStyled>
             <ProjectsList projects={projects} />
         </ExpPageContainerStyled>
     );

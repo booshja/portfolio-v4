@@ -29,7 +29,20 @@ export default {
                 navButtonImage: "navbar-nav-button-image",
             },
         },
-        projectCard: {},
+        projectCard: {
+            container: "project-card-container",
+            imageSection: "project-card-image-section",
+            image: "project-card-image",
+            textSection: "project-card-text-section",
+            headerSection: "project-card-header-section",
+            position: "project-card-position",
+            name: "project-card-name",
+            jobTitle: "project-card-job-title",
+            linkSection: "project-card-link-section",
+            codeLink: "project-card-code-link",
+            liveLink: "project-card-live-link",
+            description: "project-card-description",
+        },
         socials: {
             container: "socials-container",
             text: "socials-text",
@@ -41,6 +54,7 @@ export default {
     pages: {
         about: {
             container: "about-page-container",
+            content: "about-page-content",
             greetingHeader: "about-page-greeting-header",
             greetingText: "about-page-greeting-text",
             header: "about-page-header",
@@ -68,7 +82,10 @@ export default {
             imageContainer: "contact-page-image-container",
             linksHeader: "contact-page-links-header",
         },
-        experience: {},
+        experience: {
+            container: "experience-page-container",
+            header: "experience-page-header",
+        },
         landing: {
             container: "landing-page-container",
             firstName: "landing-page-first-name",

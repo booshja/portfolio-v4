@@ -29,7 +29,7 @@ export default function About() {
                     Skills
                 </HeaderSecondWordStyled>
             </HeaderStyled>
-            <ContentStyled>
+            <ContentStyled data-testid={testIds.content}>
                 <TextContainerStyled data-testid={testIds.textContainer}>
                     <GreetingHeaderStyled data-testid={testIds.greetingHeader}>
                         Hello!
