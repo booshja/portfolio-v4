@@ -1,6 +1,8 @@
 "use client";
 
 import { CopyTextButtonStyled } from "./CopyTextButtonStyled";
+import { InfoTooltip } from "../Tooltips/InfoTooltip";
+import { useState } from "react";
 import Copy from "@/public/icons/export-copy-white.svg";
 import Image from "next/image";
 
@@ -11,6 +13,8 @@ interface CopyTextButtonProps {
 }
 
 export const CopyTextButton = ({ copyText, testId, text }: CopyTextButtonProps) => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+
     const handleCopy = async () => {
         try {
             const permissions = await navigator.permissions.query({
@@ -18,9 +22,11 @@ export const CopyTextButton = ({ copyText, testId, text }: CopyTextButtonProps) 
             });
             if (permissions.state === "granted" || permissions.state === "prompt") {
                 await navigator.clipboard.writeText(copyText);
+                setIsOpen(true);
+                console.log("Copied to clipboard successfully!");
+            } else {
+                alert("Error copying to clipboard.");
             }
-            // TODO: trigger tooltip here instead of logging
-            console.log("Copying to clipboard was successful!");
         } catch (err) {
             alert("Error copying to clipboard:" + err);
         }
@@ -30,6 +36,11 @@ export const CopyTextButton = ({ copyText, testId, text }: CopyTextButtonProps) 
         <CopyTextButtonStyled onClick={handleCopy} data-testid={testId}>
             {text}
             <Image src={Copy} width={16} alt="Copy email address to clipboard" />
+            <InfoTooltip
+                text="Copied to clipboard!"
+                isOpen={isOpen}
+                setIsOpen={setIsOpen}
+            />
         </CopyTextButtonStyled>
     );
 };

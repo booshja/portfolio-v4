@@ -4,6 +4,7 @@ export const colors = {
     mobileNavBackground: "#292D3E",
     link: "#FFFFFF",
     text: "#FFFFFF",
+    black: "#000000",
 } as const;
 
 export const spacing = {

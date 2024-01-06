@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { spacing, colors, fontWeight, lineHeight } from "@/utils/constants";
+import { spacing, colors, lineHeight } from "@/utils/constants";
 import { PageContainerStyled } from "../GlobalStyled";
 
 export const AboutPageContainerStyled = styled(PageContainerStyled)`
@@ -40,7 +40,6 @@ export const GreetingHeaderStyled = styled.h2`
 
 export const GreetingTextStyled = styled.p`
     color: ${colors.text};
-    margin-left: ${spacing.md}px;
     text-align: center;
 `;
 

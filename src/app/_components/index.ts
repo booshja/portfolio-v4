@@ -5,3 +5,4 @@ export * from "./Nav";
 export * from "./ProjectCard";
 export * from "./ProjectsList";
 export * from "./Socials";
+export * from "./Tooltips";

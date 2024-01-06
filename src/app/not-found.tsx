@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Maps from "@/public/images/maps.jpeg";
 import {
     NotFoundContainerStyled,
     NotFoundHeaderStyled,
@@ -23,10 +22,12 @@ export default function NotFound() {
                 Go back home
             </NotFoundLinkStyled>
             <Image
-                src={Maps}
+                src="https://res.cloudinary.com/dkq1rli4x/image/upload/v1704345071/maps_ejpinj.jpg"
                 alt="A stack of different maps"
                 priority
-                style={{ objectFit: "contain", width: "auto", height: "auto" }}
+                width={300}
+                height={300}
+                style={{ objectFit: "contain" }}
                 data-testid={testIds.image}
             />
         </NotFoundContainerStyled>

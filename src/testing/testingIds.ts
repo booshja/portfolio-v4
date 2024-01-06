@@ -50,6 +50,10 @@ export default {
             link: "socials-link",
             icon: "socials-icon",
         },
+        tooltip: {
+            container: "tooltip-container",
+            text: "tooltip-text",
+        },
     },
     pages: {
         about: {

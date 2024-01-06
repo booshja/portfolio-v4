@@ -12,6 +12,7 @@ export const CopyTextButtonStyled = styled.button`
     gap: ${spacing.sm}px;
     padding: 0;
     width: fit-content;
+    position: relative;
 
     &:hover {
         cursor: pointer;

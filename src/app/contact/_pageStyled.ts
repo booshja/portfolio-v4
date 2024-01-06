@@ -7,13 +7,13 @@ import { colors, lineHeight, spacing } from "@/utils/constants";
 export const ContactPageContainerStyled = styled(PageContainerStyled)`
     display: flex;
     flex-direction: column;
-    gap: ${spacing.md}px;
+    gap: ${spacing.lg}px;
 `;
 
 export const ContactInfoContainerStyled = styled.div`
     display: flex;
     flex-direction: column;
-    gap: ${spacing.sm}px;
+    gap: ${spacing.md}px;
 
     & > button {
         margin-left: ${spacing.md}px;

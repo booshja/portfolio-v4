@@ -31,6 +31,7 @@ export const CardStyled = styled.article`
 export const ImageSectionStyled = styled.section`
     border-radius: ${spacing.sm}px;
     overflow: hidden;
+    width: 100%;
 `;
 
 export const TextSectionStyled = styled.section`

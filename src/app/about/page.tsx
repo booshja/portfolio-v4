@@ -82,10 +82,12 @@ export default function About() {
                 </TextContainerStyled>
                 <ImageContainerStyled data-testid={testIds.imageContainer}>
                     <Image
-                        src=""
+                        src="https://res.cloudinary.com/dkq1rli4x/image/upload/v1704500230/me-at-tmobile_ilojpt.jpg"
                         alt="Jacob Andes"
                         priority
-                        style={{ objectFit: "contain", width: "auto", height: "auto" }}
+                        width={300}
+                        height={300}
+                        style={{ objectFit: "contain" }}
                         data-testid={testIds.image}
                     />
                 </ImageContainerStyled>
