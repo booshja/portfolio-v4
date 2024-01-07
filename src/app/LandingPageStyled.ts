@@ -9,6 +9,10 @@ export const LandingPageStyled = styled(PageContainerStyled)`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: ${breakpoints.mobileMd}px) {
+        gap: ${spacing.lg}px;
+    }
 `;
 
 export const NameStyled = styled.h1`
@@ -23,6 +27,11 @@ export const NameStyled = styled.h1`
     @media (min-width: ${breakpoints.mobileSm}px) {
         width: 80%;
     }
+    @media (min-width: ${breakpoints.mobileLg}px) {
+        font-size: ${spacing["4xl"]}px;
+        line-height: ${lineHeight["4xl"]}px;
+        width: 100%;
+    }
 `;
 
 export const FirstNameStyled = styled.span`
@@ -35,4 +44,9 @@ export const LastNameStyled = styled.span`
 
 export const JobTitleStyled = styled.h2`
     color: ${colors.text};
+
+    @media (min-width: ${breakpoints.mobileLg}px) {
+        font-size: ${spacing.xl}px;
+        line-height: ${lineHeight.xl}px;
+    }
 `;

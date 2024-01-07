@@ -1,6 +1,6 @@
 "use client";
 
-import { colors, spacing } from "@/utils/constants";
+import { breakpoints, colors, spacing } from "@/utils/constants";
 import styled from "styled-components";
 
 export const CopyrightFooterStyled = styled.footer`

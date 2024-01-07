@@ -16,7 +16,7 @@ export const ExpPageHeaderStyled = styled.h1`
     line-height: ${lineHeight.xl}px;
     text-transform: uppercase;
 
-    @media (${breakpoints.mobileSm}px) {
+    @media (min-width: ${breakpoints.mobileSm}px) {
         font-size: ${spacing.xxl}px;
         line-height: ${lineHeight.xxl}px;
     }

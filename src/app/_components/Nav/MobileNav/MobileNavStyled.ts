@@ -2,7 +2,13 @@
 
 import Link from "next/link";
 import styled from "styled-components";
-import { colors, fontWeight, lineHeight, spacing } from "@/utils/constants";
+import {
+    breakpoints,
+    colors,
+    fontWeight,
+    lineHeight,
+    spacing,
+} from "@/utils/constants";
 
 interface ContainerStyledProps {
     $isOpen: boolean;
@@ -40,8 +46,8 @@ export const ClosingButtonStyled = styled.button`
     font-weight: ${fontWeight.bold};
     font-size: ${spacing.lg}px;
 
-    &:hover {
-        cursor: pointer;
+    @media (min-width: ${breakpoints.mobileLg}px) {
+        font-size: ${spacing.xl}px;
     }
 `;
 
@@ -50,6 +56,12 @@ export const LogoStyled = styled(Link)`
     text-decoration: none;
     font-weight: ${fontWeight.bold};
     font-size: ${spacing.md}px;
+
+    @media (min-width: ${breakpoints.mobileLg}px) {
+        font-size: ${spacing.lg}px;
+        width: 80%;
+        text-align: center;
+    }
 `;
 
 export const NavListStyled = styled.ul`
@@ -72,4 +84,9 @@ export const NavLinkStyled = styled(Link)`
     font-weight: ${fontWeight.bold};
     font-size: ${spacing.lg}px;
     line-height: ${lineHeight.lg}px;
+
+    @media (min-width: ${breakpoints.mobileLg}px) {
+        font-size: ${spacing.xl}px;
+        line-height: ${lineHeight.xl}px;
+    }
 `;

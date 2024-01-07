@@ -59,6 +59,7 @@ export const MobileNav = ({ isOpen, handleMenuClose }: MobileNavProps) => (
                         href={strings.blogUrl}
                         text="blog"
                         mobileNav
+                        inline
                         testId={testIds.navLink}
                     />
                 </NavItemStyled>

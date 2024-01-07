@@ -2,7 +2,7 @@ import testingIds from "@/testing/testingIds";
 import Image from "next/image";
 import Github from "@/public/icons/github-white.svg";
 import LinkedIn from "@/public/icons/linkedin-white.svg";
-import { strings } from "@/utils/constants";
+import { breakpoints, spacing, strings } from "@/utils/constants";
 import {
     SocialsContainerStyled,
     SocialsDividerStyled,
@@ -32,8 +32,8 @@ export const Socials = ({ horizontal = false }: SocialsProps) => {
             >
                 <Image
                     src={Github}
-                    height={32}
-                    width={32}
+                    fill
+                    sizes={`(max-width: ${breakpoints.mobileLg}px) ${spacing.xl}px, ${spacing.xxl}px`}
                     alt="Github profile"
                     data-testid={testIds.icon}
                 />
@@ -45,8 +45,8 @@ export const Socials = ({ horizontal = false }: SocialsProps) => {
             >
                 <Image
                     src={LinkedIn}
-                    height={32}
-                    width={32}
+                    fill
+                    sizes={`(max-width: ${breakpoints.mobileLg}px) ${spacing.xl}px, ${spacing.xxl}px`}
                     alt="LinkedIn profile"
                     data-testid={testIds.icon}
                 />

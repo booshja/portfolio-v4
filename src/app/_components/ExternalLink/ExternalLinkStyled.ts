@@ -1,6 +1,12 @@
 "use client";
 
-import { colors, spacing, lineHeight, fontWeight } from "@/utils/constants";
+import {
+    colors,
+    spacing,
+    lineHeight,
+    fontWeight,
+    breakpoints,
+} from "@/utils/constants";
 import styled from "styled-components";
 
 interface ExternalLinkStyledProps {
@@ -21,4 +27,12 @@ export const ExternalLinkStyled = styled.a<ExternalLinkStyledProps>`
     width: fit-content;
     text-decoration: ${({ $mobileNav }) => ($mobileNav ? "none" : "underline")};
     text-transform: ${({ $mobileNav }) => ($mobileNav ? "uppercase" : "none")};
+    position: relative;
+
+    @media (min-width: ${breakpoints.mobileLg}px) {
+        font-size: ${({ $mobileNav }) => ($mobileNav ? spacing.xl : spacing.lg)}px;
+        line-height: ${({ $mobileNav }) =>
+            $mobileNav ? lineHeight.xl : lineHeight.lg}px;
+        height: ${({ $mobileNav }) => ($mobileNav ? lineHeight.xl : lineHeight.lg)}px;
+    }
 `;

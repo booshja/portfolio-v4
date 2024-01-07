@@ -13,7 +13,7 @@ import { NavLink } from "../";
 import Image from "next/image";
 import Mountain from "@/public/icons/mountain-dark.svg";
 import testingIds from "@/testing/testingIds";
-import { strings } from "@/utils/constants";
+import { breakpoints, spacing, strings } from "@/utils/constants";
 import { MobileNav } from "../MobileNav";
 import { useState, useEffect } from "react";
 
@@ -89,7 +89,9 @@ export const Navbar = () => {
                     <Image
                         src={Mountain}
                         alt="Mountain that opens mobile menu"
-                        style={{ objectFit: "contain", width: "auto", height: "auto" }}
+                        fill
+                        sizes={`(max-width: ${breakpoints.mobileLg}) ${spacing.lg}px, ${spacing.xl}px`}
+                        style={{ objectFit: "contain", aspectRatio: "1/1" }}
                         data-testid={testIds.navButtonImage}
                     />
                 </MobileNavButton>
