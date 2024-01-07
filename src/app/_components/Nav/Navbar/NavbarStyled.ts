@@ -31,6 +31,10 @@ export const MobileNavButton = styled.button`
         width: ${spacing.xl}px;
         height: ${spacing.xl}px;
     }
+    @media (min-width: ${breakpoints.tabletXs}px) {
+        width: ${spacing.xl}px;
+        height: ${spacing.xl}px;
+    }
 `;
 
 export const NavbarStyled = styled.header`

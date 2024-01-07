@@ -52,10 +52,23 @@ export const PageHeaderStyled = styled.h1`
         font-size: ${spacing.xxxl}px;
         line-height: ${spacing.xxxl}px;
     }
+    @media (min-width: ${breakpoints.mobileLg}px) {
+        width: 80%;
+        margin-left: ${spacing.xl}px;
+    }
+    @media (min-width: ${breakpoints.tabletXs}px) {
+        width: 60%;
+        margin-left: ${spacing.xxl}px;
+    }
 `;
 
 export const SubHeaderStyled = styled.h2`
     color: ${colors.text};
     font-size: ${spacing.xl}px;
     line-height: ${lineHeight.xl}px;
+
+    @media (min-width: ${breakpoints.tabletXs}px) {
+        font-size: ${spacing.xxl}px;
+        line-height: ${lineHeight.xxl}px;
+    }
 `;

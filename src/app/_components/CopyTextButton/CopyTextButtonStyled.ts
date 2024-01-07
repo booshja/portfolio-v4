@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { colors, spacing } from "@/utils/constants";
+import { breakpoints, colors, spacing } from "@/utils/constants";
 
 export const CopyTextButtonStyled = styled.button`
     border: none;
@@ -16,5 +16,9 @@ export const CopyTextButtonStyled = styled.button`
 
     &:hover {
         cursor: pointer;
+    }
+
+    @media (min-width: ${breakpoints.tabletXs}px) {
+        font-size: ${spacing.lg}px;
     }
 `;

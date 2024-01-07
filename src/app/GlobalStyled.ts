@@ -13,4 +13,7 @@ export const PageContainerStyled = styled.main`
         /* min-height calc: full mobile window - navbar - copyright footer */
         min-height: calc(100dvh - ${spacing.xxxl}px - ${spacing.xl}px);
     }
+    @media (min-width: ${breakpoints.tabletXs}px) {
+        padding: ${spacing.sm}px ${spacing.lg}px ${spacing.lg}px ${spacing.lg}px;
+    }
 `;

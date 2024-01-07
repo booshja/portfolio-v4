@@ -14,4 +14,8 @@ export const CopyrightFooterStyled = styled.footer`
 export const CopyrightTextStyled = styled.p`
     font-size: ${spacing.sm}px;
     color: ${colors.text};
+
+    @media (min-width: ${breakpoints.tabletXs}px) {
+        font-size: ${spacing.md}px;
+    }
 `;

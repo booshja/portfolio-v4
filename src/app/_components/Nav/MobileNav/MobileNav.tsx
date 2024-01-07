@@ -11,7 +11,7 @@ import {
     NavLinkStyled,
     NavListStyled,
 } from "./MobileNavStyled";
-import { ExternalLink } from "../..";
+import { MobileExternalNavLink } from "../MobileExternalNavLink";
 import { strings } from "@/utils/constants";
 
 interface MobileNavProps {
@@ -55,11 +55,9 @@ export const MobileNav = ({ isOpen, handleMenuClose }: MobileNavProps) => (
                     </NavLinkStyled>
                 </NavItemStyled>
                 <NavItemStyled data-testid={testIds.navItem}>
-                    <ExternalLink
+                    <MobileExternalNavLink
                         href={strings.blogUrl}
                         text="blog"
-                        mobileNav
-                        inline
                         testId={testIds.navLink}
                     />
                 </NavItemStyled>

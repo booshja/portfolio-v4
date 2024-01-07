@@ -6,7 +6,7 @@ const testIds = testingIds.components.nav.mobileNav;
 
 describe("MobileNav component", () => {
     it("renders the MobileNav component correctly", () => {
-        render(<MobileNav />);
+        render(<MobileNav isOpen handleMenuClose={() => undefined} />);
 
         expect(screen.getByTestId(testIds.container)).toBeInTheDocument();
         expect(screen.getByTestId(testIds.closingButton)).toBeInTheDocument();

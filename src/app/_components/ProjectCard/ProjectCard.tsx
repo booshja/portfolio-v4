@@ -74,8 +74,11 @@ export const ProjectCard = ({
     };
 
     return (
-        <CardStyled data-testid={testIds.container}>
-            <ImageSectionStyled data-testid={testIds.imageSection}>
+        <CardStyled $reverse={reverseAlignment} data-testid={testIds.container}>
+            <ImageSectionStyled
+                $reverse={reverseAlignment}
+                data-testid={testIds.imageSection}
+            >
                 <Image
                     src={imageSrc}
                     alt={name}
@@ -117,7 +120,10 @@ export const ProjectCard = ({
                         {linkLine()}
                     </LinkSectionStyled>
                 )}
-                <DescriptionStyled data-testid={testIds.description}>
+                <DescriptionStyled
+                    $reverse={reverseAlignment}
+                    data-testid={testIds.description}
+                >
                     {description}
                 </DescriptionStyled>
             </TextSectionStyled>

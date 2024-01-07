@@ -7,6 +7,9 @@ export default {
         externalLink: {
             image: "external-link-image",
         },
+        mobileExternalNavLink: {
+            image: "mobile-external-nav-link-image",
+        },
         nav: {
             mobileNav: {
                 container: "mobile-nav-container",

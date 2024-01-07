@@ -49,6 +49,9 @@ export const ClosingButtonStyled = styled.button`
     @media (min-width: ${breakpoints.mobileLg}px) {
         font-size: ${spacing.xl}px;
     }
+    @media (min-width: ${breakpoints.tabletXs}px) {
+        font-size: ${spacing.xxl}px;
+    }
 `;
 
 export const LogoStyled = styled(Link)`
@@ -61,6 +64,10 @@ export const LogoStyled = styled(Link)`
         font-size: ${spacing.lg}px;
         width: 80%;
         text-align: center;
+    }
+    @media (min-width: ${breakpoints.tabletXs}px) {
+        font-size: ${spacing.xl}px;
+        width: 100%;
     }
 `;
 
@@ -88,5 +95,9 @@ export const NavLinkStyled = styled(Link)`
     @media (min-width: ${breakpoints.mobileLg}px) {
         font-size: ${spacing.xl}px;
         line-height: ${lineHeight.xl}px;
+    }
+    @media (min-width: ${breakpoints.tabletXs}px) {
+        font-size: ${spacing.xxl}px;
+        line-height: ${lineHeight.xxl}px;
     }
 `;
