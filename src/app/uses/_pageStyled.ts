@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import { PageContainerStyled } from "../GlobalStyled";
-import { colors, lineHeight, spacing } from "@/utils/constants";
+import { breakpoints, colors, lineHeight, spacing } from "@/utils/constants";
 
 export const UsesPageContainerStyled = styled(PageContainerStyled)`
     display: flex;
@@ -12,8 +12,13 @@ export const UsesPageContainerStyled = styled(PageContainerStyled)`
 
 export const PageHeaderStyled = styled.h1`
     color: ${colors.text};
-    font-size: ${spacing.xxxl}px;
-    line-height: ${lineHeight.xxxl}px;
+    font-size: ${spacing.xxl}px;
+    line-height: ${lineHeight.xxl}px;
+
+    @media (min-width: ${breakpoints.mobileSm}px) {
+        font-size: ${spacing.xxxl}px;
+        line-height: ${lineHeight.xxxl}px;
+    }
 `;
 
 export const PageDescriptionStyled = styled.p`
