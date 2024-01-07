@@ -7,11 +7,17 @@ export type Project = {
     liveLink?: string | null;
     title?: string;
     description: string;
-    imageLink: string;
+    imageName: ImageName;
 };
 
-const defaultImageLink =
-    "https://res.cloudinary.com/dkq1rli4x/image/upload/v1704345077/imagine-art-here-sign_plyy24.jpg";
+export type ImageName =
+    | "default"
+    | "bttn"
+    | "smartsheet"
+    | "portfolio"
+    | "happy-harmony"
+    | "previous-portfolio"
+    | "import-from";
 
 export const projects: Project[] = [
     {
@@ -22,8 +28,7 @@ export const projects: Project[] = [
         title: "Software Engineer I",
         description:
             "TypeScript, React, Emotion, Redux Toolkit, Backbone/CoffeeScript, Ruby, Rails, Terraform, Java, Spring, AWS",
-        imageLink:
-            "https://res.cloudinary.com/dkq1rli4x/image/upload/v1704344994/smartsheet-logo-vertical-square_ehcqyp.png",
+        imageName: "smartsheet",
     },
     {
         id: crypto.randomUUID(),
@@ -34,7 +39,8 @@ export const projects: Project[] = [
         liveLink: "https://jacobandes.dev",
         description:
             "TypeScript, Next.js, styled-components, Plausable Analytics, Vercel",
-        imageLink: defaultImageLink,
+        // imageName: 'portfolio',
+        imageName: "default",
     },
     {
         id: crypto.randomUUID(),
@@ -45,7 +51,8 @@ export const projects: Project[] = [
         liveLink: null,
         description:
             "TypeScript, Next.js, Emotion, Plausable Analytics, MongoDB, Auth0, Vercel",
-        imageLink: defaultImageLink,
+        // imageName: 'happy-harmony',
+        imageName: "default",
     },
     {
         id: crypto.randomUUID(),
@@ -56,8 +63,7 @@ export const projects: Project[] = [
         liveLink: null,
         description:
             "Javascript, Next.js, styled-components, Redux Toolkit, MongoDB, EmailJS, Vercel",
-        imageLink:
-            "https://res.cloudinary.com/dkq1rli4x/image/upload/v1666635456/jacob-andes-dev_ybxbbq.png",
+        imageName: "previous-portfolio",
     },
     {
         id: crypto.randomUUID(),
@@ -67,8 +73,7 @@ export const projects: Project[] = [
         title: "Software Engineer II",
         description:
             "Javascript, React, Redux Toolkit, RTK Query, Node, Express.js, styled-components, MongoDB, Auth0, Python, Django, PostgreSQL, Heroku",
-        imageLink:
-            "https://res.cloudinary.com/dkq1rli4x/image/upload/v1704346134/bttn-logo_onit2q.jpg",
+        imageName: "bttn",
     },
     {
         id: crypto.randomUUID(),
@@ -78,7 +83,6 @@ export const projects: Project[] = [
         codeLink: null,
         liveLink: "https://importfrom.dev",
         description: "Javascript, Next.js, Emotion, Plausable Analytics, Auth0, Vercel",
-        imageLink:
-            "https://res.cloudinary.com/dkq1rli4x/image/upload/v1666635459/import-from_hrvsmr.png",
+        imageName: "import-from",
     },
 ];

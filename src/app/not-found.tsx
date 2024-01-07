@@ -1,10 +1,11 @@
-import Image from "next/image";
 import {
     NotFoundContainerStyled,
     NotFoundHeaderStyled,
     NotFoundLinkStyled,
     NotFoundTextStyled,
 } from "./NotFoundStyled";
+import Maps from "@/public/images/maps.jpeg";
+import Image from "next/image";
 import testingIds from "@/testing/testingIds";
 
 const testIds = testingIds.pages.notFound;
@@ -21,15 +22,16 @@ export default function NotFound() {
             <NotFoundLinkStyled href="/" data-testid={testIds.link}>
                 Go back home
             </NotFoundLinkStyled>
-            <Image
-                src="https://res.cloudinary.com/dkq1rli4x/image/upload/v1704345071/maps_ejpinj.jpg"
-                alt="A stack of different maps"
-                priority
-                width={300}
-                height={300}
-                style={{ objectFit: "contain" }}
-                data-testid={testIds.image}
-            />
+            <div style={{ position: "relative", width: "80vw" }}>
+                <Image
+                    src={Maps}
+                    alt="A stack of different maps"
+                    priority
+                    fill
+                    style={{ objectFit: "contain" }}
+                    data-testid={testIds.image}
+                />
+            </div>
         </NotFoundContainerStyled>
     );
 }

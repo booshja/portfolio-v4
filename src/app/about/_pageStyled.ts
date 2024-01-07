@@ -1,7 +1,7 @@
 "use client";
 
 import styled from "styled-components";
-import { spacing, colors, lineHeight } from "@/utils/constants";
+import { spacing, colors, lineHeight, breakpoints } from "@/utils/constants";
 import { PageContainerStyled } from "../GlobalStyled";
 
 export const AboutPageContainerStyled = styled(PageContainerStyled)`
@@ -17,10 +17,15 @@ export const ContentStyled = styled.div`
 
 export const HeaderStyled = styled.h1`
     color: ${colors.text};
-    font-size: ${spacing.xxxl}px;
-    line-height: ${lineHeight.xxxl}px;
+    font-size: ${spacing.xxl}px;
+    line-height: ${lineHeight.xxl}px;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: ${breakpoints.mobileSm}px) {
+        font-size: ${spacing.xxxl}px;
+        line-height: ${lineHeight.xxxl}px;
+    }
 `;
 
 export const HeaderFirstWordStyled = styled.span`
@@ -76,4 +81,8 @@ export const ImageContainerStyled = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
+    position: relative;
+    aspect-ratio: 1.33 / 1;
+    width: 80vw;
 `;

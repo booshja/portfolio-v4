@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { colors, spacing } from "@/utils/constants";
+import SadIceCream from "@/public/images/sad-ice-cream.jpeg";
 import Image from "next/image";
 
 export default function Error(error: Error & { digest?: string }) {
@@ -25,14 +26,17 @@ export default function Error(error: Error & { digest?: string }) {
             >
                 Go back home
             </Link>
-            <Image
-                src="https://res.cloudinary.com/dkq1rli4x/image/upload/v1704345086/sad-ice-cream_zfli26.jpg"
-                priority
-                width={300}
-                height={300}
-                style={{ objectFit: "contain" }}
-                alt="A dropped waffle cone ice cream cone on a slab of rock with ice cream spilled out of it."
-            />
+            <div
+                style={{ position: "relative", width: "80vw", aspectRatio: "1.5 / 1" }}
+            >
+                <Image
+                    src={SadIceCream}
+                    priority
+                    fill
+                    style={{ objectFit: "contain" }}
+                    alt="A dropped waffle cone ice cream cone on a slab of rock with ice cream spilled out of it."
+                />
+            </div>
         </div>
     );
 }

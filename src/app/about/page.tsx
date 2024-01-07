@@ -1,6 +1,7 @@
 import testingIds from "@/testing/testingIds";
 import skills from "./_skills";
 import Image from "next/image";
+import MeAtTMobile from "@/public/images/me-at-tmobile.jpeg";
 import {
     AboutPageContainerStyled,
     ContentStyled,
@@ -82,11 +83,11 @@ export default function About() {
                 </TextContainerStyled>
                 <ImageContainerStyled data-testid={testIds.imageContainer}>
                     <Image
-                        src="https://res.cloudinary.com/dkq1rli4x/image/upload/v1704500230/me-at-tmobile_ilojpt.jpg"
-                        alt="Jacob Andes"
+                        src={MeAtTMobile}
+                        alt="Jacob Andes at T-Mobile Park with the 2023 Winter Classic ice rink in the background."
                         priority
-                        width={300}
-                        height={300}
+                        fill
+                        sizes="80vw"
                         style={{ objectFit: "contain" }}
                         data-testid={testIds.image}
                     />

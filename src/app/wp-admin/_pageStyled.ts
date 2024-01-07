@@ -8,4 +8,5 @@ export const WPAdminPageContainerStyled = styled(PageContainerStyled)`
     justify-content: center;
     align-items: center;
     width: auto;
+    position: relative;
 `;

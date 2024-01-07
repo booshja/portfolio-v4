@@ -1,6 +1,12 @@
 "use client";
 
-import { colors, fontWeight, lineHeight, spacing } from "@/utils/constants";
+import {
+    breakpoints,
+    colors,
+    fontWeight,
+    lineHeight,
+    spacing,
+} from "@/utils/constants";
 import styled from "styled-components";
 
 interface HeaderSectionStyledProps {
@@ -32,6 +38,8 @@ export const ImageSectionStyled = styled.section`
     border-radius: ${spacing.sm}px;
     overflow: hidden;
     width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
 `;
 
 export const TextSectionStyled = styled.section`
@@ -49,21 +57,38 @@ export const HeaderSectionStyled = styled.div<HeaderSectionStyledProps>`
 
 export const PositionStyled = styled.p`
     font-weight: ${fontWeight.bold};
-    font-size: ${spacing.xl}px;
-    line-height: ${lineHeight.xl}px;
+    font-size: ${spacing.lg}px;
+    line-height: ${lineHeight.lg}px;
+
+    @media (min-width: ${breakpoints.mobileSm}px) {
+        font-size: ${spacing.xl}px;
+        line-height: ${lineHeight.xl}px;
+    }
 `;
 
 export const NameStyled = styled.h2<NameStyledProps>`
     font-weight: ${fontWeight.bold};
-    font-size: ${spacing.xl}px;
-    line-height: ${lineHeight.xl}px;
+    font-size: ${spacing.lg}px;
+    line-height: ${lineHeight.lg}px;
     text-align: ${({ $reverse }) => ($reverse ? "start" : "end")};
+
+    @media (min-width: ${breakpoints.mobileSm}px) {
+        font-size: ${spacing.xl}px;
+        line-height: ${lineHeight.xl}px;
+    }
 `;
 
 export const JobTitleStyled = styled.p<JobTitleStyledProps>`
-    font-size: ${spacing.lg}px;
-    line-height: ${lineHeight.lg}px;
+    font-size: ${spacing.md}px;
+    line-height: ${lineHeight.md}px;
+    font-weight: ${fontWeight.bold};
     align-self: ${({ $reverse }) => ($reverse ? "flex-start" : "flex-end")};
+
+    @media (min-width: ${breakpoints.mobileSm}px) {
+        font-size: ${spacing.lg}px;
+        line-height: ${lineHeight.lg}px;
+        font-weight: ${fontWeight.regular};
+    }
 `;
 
 export const DescriptionStyled = styled.p`

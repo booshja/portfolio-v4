@@ -12,6 +12,7 @@ import {
 import { CopyTextButton, ExternalLink } from "../_components";
 import { strings } from "@/utils/constants";
 import Image from "next/image";
+import PenAndPaper from "@/public/images/calligraphy-pen-paper.jpeg";
 
 const testIds = testingIds.pages.contact;
 const { contactEmail, linkedInUrl, githubUrl } = strings;
@@ -56,11 +57,10 @@ export default function Contact() {
             </ContactInfoContainerStyled>
             <ImageContainerStyled data-testid={testIds.imageContainer}>
                 <Image
-                    src="https://res.cloudinary.com/dkq1rli4x/image/upload/v1704345029/calligraphy-pen-paper_ouftzv.jpg"
+                    src={PenAndPaper}
                     data-testid={testIds.image}
-                    width={300}
-                    height={300}
-                    style={{ objectFit: "contain", width: "auto", height: "auto" }}
+                    fill
+                    style={{ objectFit: "contain" }}
                     priority
                     alt="Calligraphy pen and pen lid on top of a notebook containing white pages and non-discernable black cursive writing on top of a dark-colored table."
                 />

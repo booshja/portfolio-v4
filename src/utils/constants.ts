@@ -41,3 +41,16 @@ export const strings = {
     linkedInUrl: "https://www.linkedin.com/in/jacobandes",
     blogUrl: "https://importfrom.dev",
 } as const;
+
+export const breakpoints = {
+    mobileXs: 280,
+    mobileSm: 360,
+    mobileMd: 390,
+    mobileLg: 414,
+    tabletSm: 768,
+    tabletMd: 810,
+    tabletLg: 962,
+    desktopSm: 1280,
+    desktopMd: 1366,
+    desktopLg: 1440,
+};

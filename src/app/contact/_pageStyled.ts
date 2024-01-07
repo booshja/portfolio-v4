@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import { PageContainerStyled } from "../GlobalStyled";
-import { colors, lineHeight, spacing } from "@/utils/constants";
+import { breakpoints, colors, lineHeight, spacing } from "@/utils/constants";
 
 export const ContactPageContainerStyled = styled(PageContainerStyled)`
     display: flex;
@@ -29,10 +29,9 @@ export const ExternalLinkContainerStyled = styled.div`
 
 export const ImageContainerStyled = styled.div`
     align-self: flex-end;
-    width: 250px;
-    height: 175px;
+    width: 80vw;
+    aspect-ratio: 1.5 / 1;
     position: relative;
-    margin-top: ${spacing.sm}px;
 `;
 
 export const PageHeaderFirstSpanStyled = styled.span``;
@@ -43,11 +42,16 @@ export const PageHeaderSecondSpanStyled = styled.span`
 
 export const PageHeaderStyled = styled.h1`
     color: ${colors.text};
-    font-size: ${spacing.xxxl}px;
-    line-height: ${spacing.xxxl}px;
+    font-size: ${spacing.xxl}px;
+    line-height: ${spacing.xxl}px;
     display: flex;
     flex-direction: column;
     gap: ${spacing.sm}px;
+
+    @media (min-width: ${breakpoints.mobileSm}px) {
+        font-size: ${spacing.xxxl}px;
+        line-height: ${spacing.xxxl}px;
+    }
 `;
 
 export const SubHeaderStyled = styled.h2`

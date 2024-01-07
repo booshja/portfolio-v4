@@ -13,6 +13,7 @@ import {
     TextSectionStyled,
 } from "./ProjectCardStyled";
 import type { Project } from "@/app/experience/_projects";
+import { getProjectImage } from "@/utils/helpers";
 
 interface ProjectCardProps extends Project {}
 
@@ -26,9 +27,11 @@ export const ProjectCard = ({
     liveLink,
     title,
     description,
-    imageLink,
+    imageName,
 }: ProjectCardProps) => {
     const reverseAlignment = position % 2 === 0;
+
+    const imageSrc = getProjectImage(imageName);
 
     const linkLine = () => {
         if (codeLink && liveLink) {
@@ -74,11 +77,11 @@ export const ProjectCard = ({
         <CardStyled data-testid={testIds.container}>
             <ImageSectionStyled data-testid={testIds.imageSection}>
                 <Image
-                    src={imageLink}
+                    src={imageSrc}
                     alt={name}
                     priority={position === 1}
-                    width={280}
-                    height={280}
+                    fill
+                    sizes="80vw"
                     style={{
                         objectFit: "cover",
                         boxShadow:
