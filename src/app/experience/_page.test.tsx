@@ -13,6 +13,6 @@ describe("Experience Page", () => {
         expect(screen.getByTestId(testIds.header)).toHaveTextContent("Experience");
         expect(
             screen.getAllByTestId(testingIds.components.projectCard.container)
-        ).toHaveLength(5);
+        ).toHaveLength(6);
     });
 });

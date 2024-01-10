@@ -31,9 +31,9 @@ describe("Uses Page", () => {
 
         expect(screen.getByTestId(testIds.hardwareSectionHeader)).toBeInTheDocument();
         expect(screen.getByTestId(testIds.hardwareList)).toBeInTheDocument();
-        expect(screen.getAllByTestId(testIds.hardwareListItem)).toHaveLength(10);
+        expect(screen.getAllByTestId(testIds.hardwareListItem)).toHaveLength(11);
         expect(screen.getAllByTestId(testIds.hardwareListItemParagraph)).toHaveLength(
-            10
+            11
         );
     });
 });

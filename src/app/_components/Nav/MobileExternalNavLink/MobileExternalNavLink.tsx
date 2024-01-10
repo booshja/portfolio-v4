@@ -12,7 +12,7 @@ interface MobileExternalNavLinkProps {
     text: string;
 }
 
-const testIds = testingIds.components.externalLink;
+const testIds = testingIds.components.mobileExternalNavLink;
 
 export const MobileExternalNavLink = ({
     href,
