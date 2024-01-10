@@ -26,9 +26,10 @@ export const CardStyled = styled.article<ReverseProps>`
 
     @media (min-width: ${breakpoints.tabletXs}px) {
         flex-direction: ${({ $reverse }) => ($reverse ? "row-reverse" : "row")};
-        height: 275px;
+        height: 300px;
         display: grid;
         grid-template-columns: 1fr 1fr;
+        align-items: center;
     }
 `;
 
@@ -41,6 +42,11 @@ export const ImageSectionStyled = styled.section<ReverseProps>`
 
     @media (min-width: ${breakpoints.tabletXs}px) {
         order: ${({ $reverse }) => ($reverse ? 1 : -1)};
+    }
+    @media (min-width: ${breakpoints.tabletSm}px) {
+        height: 100%;
+        width: unset;
+        justify-self: ${({ $reverse }) => ($reverse ? "start" : "end")};
     }
 `;
 

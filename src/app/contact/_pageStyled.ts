@@ -60,6 +60,9 @@ export const PageHeaderStyled = styled.h1`
         width: 60%;
         margin-left: ${spacing.xxl}px;
     }
+    @media (min-width: ${breakpoints.tabletSm}px) {
+        width: 45%;
+    }
 `;
 
 export const SubHeaderStyled = styled.h2`

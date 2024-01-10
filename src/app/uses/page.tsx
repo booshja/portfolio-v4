@@ -155,7 +155,7 @@ export default function Uses() {
                 </li>
                 <li data-testid={testIds.hardwareListItem}>
                     <p data-testid={testIds.hardwareListItemParagraph}>
-                        I additionally use a 24" Samsun - T350 Series monitor that
+                        I additionally use a 24" Samsung - T350 Series monitor that
                         I&apos;ve rotated vertical
                     </p>
                 </li>
@@ -166,9 +166,16 @@ export default function Uses() {
                 </li>
                 <li data-testid={testIds.hardwareListItem}>
                     <p data-testid={testIds.hardwareListItemParagraph}>
-                        My chair is a (INSERT HERE) with a Samsonite Lumbar Support
-                        Pillow. I also swapped out the wheels on it for Roller Blade
+                        My chair is from RapidX (which I was given and plan on
+                        replacing) with a Samsonite Lumbar Support Pillow for my lower
+                        back. I also swapped out the wheels on it for Roller Blade
                         wheels
+                    </p>
+                </li>
+                <li data-testid={testIds.hardwareListItem}>
+                    <p data-testid={testIds.hardwareListItemParagraph}>
+                        I have a Dpforest 2.5Hp Walking Pad Treadmill that I use under
+                        my desk to walk as I work and keep moving!
                     </p>
                 </li>
                 <li data-testid={testIds.hardwareListItem}>

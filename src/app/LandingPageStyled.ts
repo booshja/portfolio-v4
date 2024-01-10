@@ -36,6 +36,9 @@ export const NameStyled = styled.h1`
         font-size: ${spacing["4xl"]}px;
         line-height: ${lineHeight["4xl"]}px;
     }
+    @media (min-width: ${breakpoints.tabletSm}px) {
+        width: 60%;
+    }
 `;
 
 export const FirstNameStyled = styled.span`
