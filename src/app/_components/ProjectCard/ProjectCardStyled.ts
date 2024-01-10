@@ -31,6 +31,13 @@ export const CardStyled = styled.article<ReverseProps>`
         grid-template-columns: 1fr 1fr;
         align-items: center;
     }
+    @media (min-width: ${breakpoints.tabletSm}px) {
+        width: 90%;
+        align-self: center;
+    }
+    @media (min-width: ${breakpoints.tabletLg}px) {
+        width: 75%;
+    }
 `;
 
 export const ImageSectionStyled = styled.section<ReverseProps>`

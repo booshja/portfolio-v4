@@ -34,6 +34,11 @@ export const ContainerStyled = styled.section<ContainerStyledProps>`
     @media (prefers-reduced-motion) {
         transition: none;
     }
+
+    @media (min-width: ${breakpoints.mobileLg}px) {
+        gap: ${spacing.lg}px;
+        padding-top: ${spacing.lg}px;
+    }
 `;
 
 export const ClosingButtonStyled = styled.button`
@@ -52,6 +57,9 @@ export const ClosingButtonStyled = styled.button`
     @media (min-width: ${breakpoints.tabletXs}px) {
         font-size: ${spacing.xxl}px;
     }
+    @media (min-width: ${breakpoints.tabletXs}px) {
+        font-size: ${spacing.xl}px;
+    }
 `;
 
 export const LogoStyled = styled(Link)`
@@ -68,6 +76,9 @@ export const LogoStyled = styled(Link)`
     @media (min-width: ${breakpoints.tabletXs}px) {
         font-size: ${spacing.xl}px;
         width: 100%;
+    }
+    @media (min-width: ${breakpoints.tabletXs}px) {
+        font-size: ${spacing.lg}px;
     }
 `;
 
@@ -99,5 +110,9 @@ export const NavLinkStyled = styled(Link)`
     @media (min-width: ${breakpoints.tabletXs}px) {
         font-size: ${spacing.xxl}px;
         line-height: ${lineHeight.xxl}px;
+    }
+    @media (min-width: ${breakpoints.tabletLg}px) {
+        font-size: ${spacing.xl}px;
+        line-height: ${lineHeight.xl}px;
     }
 `;

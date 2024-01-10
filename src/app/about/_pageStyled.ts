@@ -113,6 +113,9 @@ export const SkillListStyled = styled.ul`
     @media (min-width: ${breakpoints.tabletXs}px) {
         grid-template-columns: repeat(3, 1fr);
     }
+    @media (min-width: ${breakpoints.tabletMd}px) {
+        font-size: ${spacing.lg}px;
+    }
 `;
 
 export const ImageContainerStyled = styled.section`
@@ -123,4 +126,8 @@ export const ImageContainerStyled = styled.section`
     position: relative;
     aspect-ratio: 1.33 / 1;
     width: 80vw;
+
+    @media (min-width: ${breakpoints.tabletLg}px) {
+        width: 50vw;
+    }
 `;

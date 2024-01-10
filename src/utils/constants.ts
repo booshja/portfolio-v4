@@ -16,6 +16,7 @@ export const spacing = {
     xxl: 48,
     xxxl: 64,
     "4xl": 96,
+    "5xl": 128,
 } as const;
 
 export const lineHeight = {
@@ -27,6 +28,7 @@ export const lineHeight = {
     xxl: spacing.xxl * 1.2,
     xxxl: spacing.xxxl * 1.2,
     "4xl": spacing["4xl"] * 1.2,
+    "5xl": spacing["5xl"] * 1.2,
 };
 
 export const fontWeight = {

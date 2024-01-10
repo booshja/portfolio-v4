@@ -32,6 +32,11 @@ export const ImageContainerStyled = styled.div`
     width: 80vw;
     aspect-ratio: 1.5 / 1;
     position: relative;
+
+    @media (min-width: ${breakpoints.mobileLg}px) {
+        width: 60vw;
+        margin-top: -${spacing["5xl"]}px;
+    }
 `;
 
 export const PageHeaderFirstSpanStyled = styled.span``;
@@ -62,6 +67,9 @@ export const PageHeaderStyled = styled.h1`
     }
     @media (min-width: ${breakpoints.tabletSm}px) {
         width: 45%;
+    }
+    @media (min-width: ${breakpoints.tabletLg}px) {
+        width: 35%;
     }
 `;
 

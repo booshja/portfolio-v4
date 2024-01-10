@@ -34,6 +34,10 @@ export const SocialsTextStyled = styled.p`
         font-size: ${spacing.xl}px;
         line-height: ${lineHeight.xl}px;
     }
+    @media (min-width: ${breakpoints.tabletXs}px) {
+        font-size: ${spacing.lg}px;
+        line-height: ${lineHeight.lg}px;
+    }
 `;
 
 export const SocialsDividerStyled = styled.div`

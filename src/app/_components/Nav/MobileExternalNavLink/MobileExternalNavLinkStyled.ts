@@ -33,6 +33,11 @@ export const MobileExternalNavLinkStyled = styled.a`
         line-height: ${lineHeight.xxl}px;
         gap: ${spacing.md}px;
     }
+    @media (min-width: ${breakpoints.tabletLg}px) {
+        font-size: ${spacing.xl}px;
+        line-height: ${lineHeight.xl}px;
+        gap: ${spacing.sm}px;
+    }
 `;
 
 export const ImageContainerStyled = styled.div`
@@ -47,5 +52,9 @@ export const ImageContainerStyled = styled.div`
     @media (min-width: ${breakpoints.tabletXs}px) {
         width: ${spacing.xxl}px;
         height: ${spacing.xxl}px;
+    }
+    @media (min-width: ${breakpoints.tabletLg}px) {
+        width: ${spacing.xl}px;
+        height: ${spacing.xl}px;
     }
 `;
