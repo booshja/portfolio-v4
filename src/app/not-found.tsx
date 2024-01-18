@@ -1,6 +1,7 @@
 import {
     NotFoundContainerStyled,
     NotFoundHeaderStyled,
+    NotFoundImageContainerStyled,
     NotFoundLinkStyled,
     NotFoundTextStyled,
 } from "./NotFoundStyled";
@@ -40,7 +41,7 @@ export default function NotFound() {
             <NotFoundLinkStyled href="/" data-testid={testIds.link}>
                 Go back home
             </NotFoundLinkStyled>
-            <div style={{ position: "relative", width: "80vw" }}>
+            <NotFoundImageContainerStyled>
                 <Image
                     src={Maps}
                     alt="A stack of different maps"
@@ -49,7 +50,7 @@ export default function NotFound() {
                     style={{ objectFit: "contain" }}
                     data-testid={testIds.image}
                 />
-            </div>
+            </NotFoundImageContainerStyled>
         </NotFoundContainerStyled>
     );
 }

@@ -25,3 +25,9 @@ export const NotFoundLinkStyled = styled(Link)`
     color: ${colors.text};
     margin-bottom: ${spacing.md}px;
 `;
+
+export const NotFoundImageContainerStyled = styled.div`
+    position: relative;
+    width: 80vw;
+    aspect-ratio: 1.5 / 1;
+`;
