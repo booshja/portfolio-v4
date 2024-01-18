@@ -3,7 +3,7 @@ import PlausibleProvider from "next-plausible";
 import StyledComponentsRegistry from "@/lib/registry";
 import type { Metadata } from "next";
 import "./globals.css";
-import { Copyright, Navbar } from "@/components/index";
+import { ConsoleLog, Copyright, Navbar } from "@/components/index";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -85,6 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 style={{ backgroundColor: "#444267", height: "100dvh" }}
             >
                 <StyledComponentsRegistry>
+                    <ConsoleLog />
                     <Navbar />
                     {children}
                     <Copyright />
