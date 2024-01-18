@@ -1,5 +1,6 @@
 export * from "./Copyright";
 export * from "./CopyTextButton";
+export * from "./ConsoleLog";
 export * from "./ExternalLink";
 export * from "./Nav";
 export * from "./ProjectCard";
