@@ -35,7 +35,20 @@ export const ImageContainerStyled = styled.div`
 
     @media (min-width: ${breakpoints.mobileLg}px) {
         width: 60vw;
-        margin-top: -${spacing["5xl"]}px;
+        margin-top: -${spacing.xxxl}px;
+    }
+    @media (min-width: ${breakpoints.tabletXs}px) {
+        margin-top: -${spacing["4xl"]}px;
+    }
+    @media (min-width: ${breakpoints.tabletLg}px) {
+        width: 55vw;
+        margin-top: -${spacing["7xl"]}px;
+    }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        width: 65vw;
+    }
+    @media (min-width: ${breakpoints.desktopLg}px) {
+        width: calc(1440px * 0.65);
     }
 `;
 
@@ -70,6 +83,11 @@ export const PageHeaderStyled = styled.h1`
     }
     @media (min-width: ${breakpoints.tabletLg}px) {
         width: 35%;
+    }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        font-size: ${spacing["5xl"]}px;
+        line-height: ${spacing["5xl"]}px;
+        width: 55%;
     }
 `;
 

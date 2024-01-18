@@ -47,6 +47,11 @@ export const NameStyled = styled.h1`
     @media (min-width: ${breakpoints.tabletLg}px) {
         width: 60%;
     }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        width: 70%;
+        font-size: ${spacing["6xl"]}px;
+        line-height: ${lineHeight["6xl"]}px;
+    }
 `;
 
 export const FirstNameStyled = styled.span`
@@ -67,5 +72,9 @@ export const JobTitleStyled = styled.h2`
     @media (min-width: ${breakpoints.tabletXs}px) {
         font-size: ${spacing.xxl}px;
         line-height: ${lineHeight.xxl}px;
+    }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        font-size: ${spacing.xxxl}px;
+        line-height: ${lineHeight.xxxl}px;
     }
 `;

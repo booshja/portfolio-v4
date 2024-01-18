@@ -1,6 +1,12 @@
 "use client";
 
-import { colors, fontWeight, lineHeight, spacing } from "@/utils/constants";
+import {
+    breakpoints,
+    colors,
+    fontWeight,
+    lineHeight,
+    spacing,
+} from "@/utils/constants";
 import styled from "styled-components";
 
 interface InfoTooltipStyledProps {
@@ -30,4 +36,10 @@ export const InfoTooltipStyled = styled.span<InfoTooltipStyledProps>`
     margin-left: -60px;
     opacity: ${({ $visible }) => ($visible ? 1 : 0)};
     transition: all 250ms ease-in-out;
+
+    @media (min-width: ${breakpoints.tabletXs}px) {
+        font-size: ${spacing.md}px;
+        padding: 18px 12px;
+        top: -125%;
+    }
 `;

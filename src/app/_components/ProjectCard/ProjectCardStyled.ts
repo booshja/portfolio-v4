@@ -38,6 +38,18 @@ export const CardStyled = styled.article<ReverseProps>`
     @media (min-width: ${breakpoints.tabletLg}px) {
         width: 75%;
     }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        width: 90%;
+        min-height: 450px;
+        gap: ${spacing.xl}px;
+    }
+    @media (min-width: ${breakpoints.desktopMd}px) {
+        width: 85%;
+    }
+    @media (min-width: ${breakpoints.desktopLg}px) {
+        width: 90%;
+        min-height: 500px;
+    }
 `;
 
 export const ImageSectionStyled = styled.section<ReverseProps>`
@@ -55,12 +67,19 @@ export const ImageSectionStyled = styled.section<ReverseProps>`
         width: unset;
         justify-self: ${({ $reverse }) => ($reverse ? "start" : "end")};
     }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        aspect-ratio: 1.25 / 1;
+    }
 `;
 
 export const TextSectionStyled = styled.section`
     display: flex;
     flex-direction: column;
     gap: ${spacing.sm}px;
+
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        gap: ${spacing.md}px;
+    }
 `;
 
 export const HeaderSectionStyled = styled.div<ReverseProps>`
@@ -85,6 +104,10 @@ export const PositionStyled = styled.p`
         font-size: ${spacing.xl}px;
         line-height: ${lineHeight.xl}px;
     }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        font-size: ${spacing.xxl}px;
+        line-height: ${lineHeight.xxl}px;
+    }
 `;
 
 export const NameStyled = styled.h2<ReverseProps>`
@@ -97,6 +120,10 @@ export const NameStyled = styled.h2<ReverseProps>`
         font-size: ${spacing.xl}px;
         line-height: ${lineHeight.xl}px;
         text-align: ${({ $reverse }) => ($reverse ? "end" : "start")};
+    }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        font-size: ${spacing.xxl}px;
+        line-height: ${lineHeight.xxl}px;
     }
 `;
 
@@ -114,6 +141,10 @@ export const JobTitleStyled = styled.p<ReverseProps>`
     @media (min-width: ${breakpoints.tabletXs}px) {
         align-self: ${({ $reverse }) => ($reverse ? "flex-end" : "flex-start")};
     }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        font-size: ${spacing.xl}px;
+        line-height: ${lineHeight.xl}px;
+    }
 `;
 
 export const DescriptionStyled = styled.p<ReverseProps>`
@@ -123,6 +154,10 @@ export const DescriptionStyled = styled.p<ReverseProps>`
 
     @media (min-width: ${breakpoints.tabletXs}px) {
         text-align: ${({ $reverse }) => ($reverse ? "end" : "start")};
+    }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        font-size: ${spacing.lg}px;
+        line-height: ${lineHeight.xl}px;
     }
 `;
 

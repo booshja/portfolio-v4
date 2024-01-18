@@ -35,6 +35,9 @@ export const MobileNavButton = styled.button`
         width: ${spacing.xl}px;
         height: ${spacing.xl}px;
     }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        display: none;
+    }
 `;
 
 export const NavbarStyled = styled.header`
@@ -46,7 +49,7 @@ export const NavbarStyled = styled.header`
     background-color: transparent;
 
     @media (min-width: ${breakpoints.mobileLg}px) {
-        height: ${spacing.xxxl}px;
+        min-height: ${spacing.xxxl}px;
     }
 `;
 
@@ -57,6 +60,12 @@ export const NavListStyled = styled.ul`
     list-style: none;
     justify-content: space-between;
     display: none;
+
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        gap: ${spacing.xxl}px;
+    }
 `;
 
 export const NavSectionStyled = styled.section`

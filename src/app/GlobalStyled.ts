@@ -16,4 +16,8 @@ export const PageContainerStyled = styled.main`
     @media (min-width: ${breakpoints.tabletXs}px) {
         padding: ${spacing.sm}px ${spacing.lg}px ${spacing.lg}px ${spacing.lg}px;
     }
+    @media (min-width: ${breakpoints.desktopLg}px) {
+        width: 1440px;
+        margin-left: calc((100dvw - 1440px) / 2);
+    }
 `;

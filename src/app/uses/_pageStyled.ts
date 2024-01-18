@@ -39,10 +39,12 @@ export const SoftwareSectionHeaderStyled = styled.h2`
     line-height: ${lineHeight.xl}px;
 
     @media (min-width: ${breakpoints.tabletXs}px) {
-        /* flex-direction: row; */
         gap: ${spacing.sm}px;
         font-size: ${spacing.xxl}px;
         line-height: ${lineHeight.xxl}px;
+    }
+    @media (min-width: ${breakpoints.tabletLg}px) {
+        flex-direction: row;
     }
 `;
 

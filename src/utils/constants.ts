@@ -17,6 +17,9 @@ export const spacing = {
     xxxl: 64,
     "4xl": 96,
     "5xl": 128,
+    "6xl": 192,
+    "7xl": 256,
+    "8xl": 384,
 } as const;
 
 export const lineHeight = {
@@ -29,6 +32,8 @@ export const lineHeight = {
     xxxl: spacing.xxxl * 1.2,
     "4xl": spacing["4xl"] * 1.2,
     "5xl": spacing["5xl"] * 1.2,
+    "6xl": spacing["6xl"] * 1.2,
+    "7xl": spacing["7xl"] * 1.2,
 };
 
 export const fontWeight = {
@@ -38,7 +43,7 @@ export const fontWeight = {
 } as const;
 
 export const strings = {
-    contactEmail: "jacob.andes@gmail.com",
+    contactEmail: "jacobandesdev@gmail.com",
     githubUrl: "https://github.com/booshja",
     linkedInUrl: "https://www.linkedin.com/in/jacobandes",
     blogUrl: "https://importfrom.dev",

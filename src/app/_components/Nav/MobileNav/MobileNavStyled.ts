@@ -39,6 +39,9 @@ export const ContainerStyled = styled.section<ContainerStyledProps>`
         gap: ${spacing.lg}px;
         padding-top: ${spacing.lg}px;
     }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        display: none;
+    }
 `;
 
 export const ClosingButtonStyled = styled.button`

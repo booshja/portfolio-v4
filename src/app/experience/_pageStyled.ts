@@ -20,4 +20,8 @@ export const ExpPageHeaderStyled = styled.h1`
         font-size: ${spacing.xxl}px;
         line-height: ${lineHeight.xxl}px;
     }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        font-size: ${spacing["5xl"]}px;
+        line-height: ${lineHeight["5xl"]}px;
+    }
 `;

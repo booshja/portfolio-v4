@@ -1,6 +1,10 @@
 "use client";
 
-import { ANavLinkStyled, NextNavLinkStyled } from "./NavLinkStyled";
+import {
+    ANavLinkStyled,
+    ImageContainerStyled,
+    NextNavLinkStyled,
+} from "./NavLinkStyled";
 import ExternalLink from "@/public/icons/external-link.svg";
 import Image from "next/image";
 
@@ -21,19 +25,23 @@ export const NavLink = ({
 }: NavLinkProps) => {
     const activePath = pathname?.split("/")[1];
     const activeText = text.split("/")[0];
-    const isActive = activePath === activeText ? "true" : "false";
+    const isActive = activePath === activeText;
 
     return external ? (
         <ANavLinkStyled href={href} target="_blank" data-testid={testId}>
             {text}
-            <Image
-                src={ExternalLink}
-                alt="Link opens in external tab"
-                style={{ objectFit: "contain", width: "auto", height: "auto" }}
-            />
+            <ImageContainerStyled>
+                <Image
+                    src={ExternalLink}
+                    fill
+                    sizes="24px"
+                    alt="Link opens in external tab"
+                    style={{ objectFit: "contain" }}
+                />
+            </ImageContainerStyled>
         </ANavLinkStyled>
     ) : (
-        <NextNavLinkStyled href={href} active={isActive} data-testid={testId}>
+        <NextNavLinkStyled href={href} $active={isActive} data-testid={testId}>
             {text}
         </NextNavLinkStyled>
     );

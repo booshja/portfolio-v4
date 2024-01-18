@@ -17,6 +17,12 @@ export const ContentStyled = styled.div`
     display: flex;
     flex-direction: column-reverse;
     gap: ${spacing.md}px;
+
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: ${spacing.lg}px;
+    }
 `;
 
 export const HeaderStyled = styled.h1`
@@ -36,6 +42,11 @@ export const HeaderStyled = styled.h1`
     @media (min-width: ${breakpoints.tabletXs}px) {
         flex-direction: row;
     }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        flex-direction: column;
+        font-size: ${spacing["5xl"]}px;
+        line-height: ${lineHeight["5xl"]}px;
+    }
 `;
 
 export const HeaderFirstWordStyled = styled.span`
@@ -48,6 +59,9 @@ export const HeaderSecondWordStyled = styled.span`
 
     @media (min-width: ${breakpoints.tabletXs}px) {
         margin-left: 0;
+    }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        margin-left: ${spacing["6xl"]}px;
     }
 `;
 
@@ -69,6 +83,10 @@ export const GreetingTextStyled = styled.p`
     @media (min-width: ${breakpoints.tabletXs}px) {
         font-size: ${spacing.lg}px;
         line-height: ${lineHeight.lg}px;
+    }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        text-align: left;
+        line-height: ${lineHeight.xl}px;
     }
 `;
 
@@ -116,6 +134,10 @@ export const SkillListStyled = styled.ul`
     @media (min-width: ${breakpoints.tabletMd}px) {
         font-size: ${spacing.lg}px;
     }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        grid-template-columns: repeat(4, 1fr);
+        width: 175%;
+    }
 `;
 
 export const ImageContainerStyled = styled.section`
@@ -129,5 +151,11 @@ export const ImageContainerStyled = styled.section`
 
     @media (min-width: ${breakpoints.tabletLg}px) {
         width: 50vw;
+    }
+    @media (min-width: ${breakpoints.desktopSm}px) {
+        width: 40vw;
+        align-self: start;
+        height: 550px;
+        align-items: flex-end;
     }
 `;

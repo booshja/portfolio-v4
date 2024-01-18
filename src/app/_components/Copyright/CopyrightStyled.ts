@@ -16,6 +16,6 @@ export const CopyrightTextStyled = styled.p`
     color: ${colors.text};
 
     @media (min-width: ${breakpoints.tabletXs}px) {
-        font-size: ${spacing.md}px;
+        font-size: 12px;
     }
 `;
