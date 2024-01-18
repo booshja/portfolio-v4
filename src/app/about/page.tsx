@@ -16,6 +16,13 @@ import {
     SkillUsageHeaderStyled,
     TextContainerStyled,
 } from "./_pageStyled";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "About/Skills - Jacob Andes",
+    description:
+        "About me and skills for Jacob Andes, software engineer based in the United States.",
+};
 
 const testIds = testingIds.pages.about;
 

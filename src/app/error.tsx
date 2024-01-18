@@ -4,6 +4,24 @@ import Link from "next/link";
 import { colors, spacing } from "@/utils/constants";
 import SadIceCream from "@/public/images/sad-ice-cream.jpeg";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Something went wrong",
+    robots: {
+        index: false,
+        follow: false,
+        nocache: false,
+        googleBot: {
+            index: false,
+            follow: false,
+            noimageindex: true,
+            "max-video-preview": -1,
+            "max-image-preview": "none",
+            "max-snippet": -1,
+        },
+    },
+};
 
 export default function Error(error: Error & { digest?: string }) {
     return (

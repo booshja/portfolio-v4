@@ -12,6 +12,13 @@ import {
     SoftwareSectionHeaderThirdWordStyled,
     UsesPageContainerStyled,
 } from "./_pageStyled";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Uses Page - Jacob Andes",
+    description:
+        "Uses page for Jacob Andes, software engineer based in the United States.",
+};
 
 const testIds = testingIds.pages.uses;
 

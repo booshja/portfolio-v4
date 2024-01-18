@@ -13,6 +13,12 @@ import { CopyTextButton, ExternalLink } from "../_components";
 import { strings } from "@/utils/constants";
 import Image from "next/image";
 import PenAndPaper from "@/public/images/calligraphy-pen-paper.jpeg";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Contact - Jacob Andes",
+    description: "Contact Jacob Andes, software engineer based in the United States.",
+};
 
 const testIds = testingIds.pages.contact;
 const { contactEmail, linkedInUrl, githubUrl } = strings;
