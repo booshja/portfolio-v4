@@ -1,13 +1,14 @@
 "use client";
 
 import styled from "styled-components";
-import { PageContainerStyled } from "../GlobalStyled";
+import { PageContainerStyled, animations } from "../GlobalStyled";
 import { breakpoints, colors, lineHeight, spacing } from "@/utils/constants";
 
 export const UsesPageContainerStyled = styled(PageContainerStyled)`
     display: flex;
     flex-direction: column;
     gap: ${spacing.md}px;
+    ${animations.slideInLeft};
 `;
 
 export const PageHeaderStyled = styled.h1`

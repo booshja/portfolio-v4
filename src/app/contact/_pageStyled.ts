@@ -1,13 +1,14 @@
 "use client";
 
 import styled from "styled-components";
-import { PageContainerStyled } from "../GlobalStyled";
+import { PageContainerStyled, animations } from "../GlobalStyled";
 import { breakpoints, colors, lineHeight, spacing } from "@/utils/constants";
 
 export const ContactPageContainerStyled = styled(PageContainerStyled)`
     display: flex;
     flex-direction: column;
     gap: ${spacing.lg}px;
+    ${animations.slideInLeft};
 `;
 
 export const ContactInfoContainerStyled = styled.div`

@@ -1,5 +1,6 @@
 "use client";
 
+import { animations } from "@/app/GlobalStyled";
 import {
     breakpoints,
     colors,
@@ -23,6 +24,7 @@ export const CardStyled = styled.article<ReverseProps>`
     display: flex;
     flex-direction: column;
     gap: ${spacing.md}px;
+    ${({ $reverse }) => ($reverse ? animations.slideInLeft : animations.slideInRight)};
 
     @media (min-width: ${breakpoints.tabletXs}px) {
         flex-direction: ${({ $reverse }) => ($reverse ? "row-reverse" : "row")};

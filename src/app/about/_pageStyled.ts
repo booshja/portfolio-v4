@@ -2,11 +2,12 @@
 
 import styled from "styled-components";
 import { spacing, colors, lineHeight, breakpoints } from "@/utils/constants";
-import { PageContainerStyled } from "../GlobalStyled";
+import { PageContainerStyled, animations } from "../GlobalStyled";
 
 export const AboutPageContainerStyled = styled(PageContainerStyled)`
     display: flex;
     flex-direction: column;
+    ${animations.slideInLeft};
 
     @media (min-width: ${breakpoints.tabletXs}px) {
         gap: ${spacing.md}px;

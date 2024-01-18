@@ -61,3 +61,12 @@ h6 {
 #__next {
     isolation: isolate;
 }
+
+/* 
+  Animation Variables
+*/
+:root {
+    --slide-in-left-var: -10px;
+    --slide-in-right-var: 10px;
+    --slide-up-var: 10px;
+}

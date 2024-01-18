@@ -1,7 +1,7 @@
 "use client";
 
 import { breakpoints, colors, lineHeight, spacing } from "@/utils/constants";
-import { PageContainerStyled } from "./GlobalStyled";
+import { PageContainerStyled, animations } from "./GlobalStyled";
 import styled from "styled-components";
 
 export const LandingPageStyled = styled(PageContainerStyled)`
@@ -56,14 +56,17 @@ export const NameStyled = styled.h1`
 
 export const FirstNameStyled = styled.span`
     align-self: flex-start;
+    ${animations.slideInLeft};
 `;
 
 export const LastNameStyled = styled.span`
     align-self: flex-end;
+    ${animations.slideInRight};
 `;
 
 export const JobTitleStyled = styled.h2`
     color: ${colors.text};
+    ${animations.slideInUp};
 
     @media (min-width: ${breakpoints.mobileLg}px) {
         font-size: ${spacing.xl}px;

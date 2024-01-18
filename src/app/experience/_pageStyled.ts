@@ -1,7 +1,7 @@
 "use client";
 
 import { breakpoints, colors, lineHeight, spacing } from "@/utils/constants";
-import { PageContainerStyled } from "../GlobalStyled";
+import { PageContainerStyled, animations } from "../GlobalStyled";
 import styled from "styled-components";
 
 export const ExpPageContainerStyled = styled(PageContainerStyled)`
@@ -15,6 +15,7 @@ export const ExpPageHeaderStyled = styled.h1`
     font-size: ${spacing.xl}px;
     line-height: ${lineHeight.xl}px;
     text-transform: uppercase;
+    ${animations.slideInLeft};
 
     @media (min-width: ${breakpoints.mobileSm}px) {
         font-size: ${spacing.xxl}px;
