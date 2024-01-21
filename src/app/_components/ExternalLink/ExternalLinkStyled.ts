@@ -34,7 +34,8 @@ export const ExternalLinkStyled = styled.a<ExternalLinkStyledProps>`
     }
 `;
 
-export const ImageContainerStyled = styled.div`
+export const ImageContainerStyled = styled.span`
+    display: block;
     position: relative;
     width: ${spacing.md}px;
     height: ${spacing.md}px;
