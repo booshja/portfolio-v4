@@ -12,8 +12,7 @@ const jobProject: Project = {
     type: "job",
     title: "Test Title",
     description: "Test Description",
-    imageLink:
-        "https://cdn11.bigcommerce.com/s-fe15l15m62/images/stencil/1280x1280/products/112/376/Stop__71862.1617907722.jpg?c=1",
+    imageName: "default",
 };
 const projectProject: Project = {
     id: "abcd123",
@@ -23,8 +22,7 @@ const projectProject: Project = {
     codeLink: "https://github.com",
     liveLink: "https://github.com",
     description: "Test Description",
-    imageLink:
-        "https://cdn11.bigcommerce.com/s-fe15l15m62/images/stencil/1280x1280/products/112/376/Stop__71862.1617907722.jpg?c=1",
+    imageName: "default",
 };
 
 describe("ProjectCard Component", () => {
