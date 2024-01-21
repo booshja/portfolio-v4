@@ -23,12 +23,12 @@ export const CopyTextButton = ({ copyText, testId, text }: CopyTextButtonProps) 
             if (permissions.state === "granted" || permissions.state === "prompt") {
                 await navigator.clipboard.writeText(copyText);
                 setIsOpen(true);
-                console.log("Copied to clipboard successfully!");
             } else {
                 alert("Error copying to clipboard.");
+                console.log("after alert");
             }
         } catch (err) {
-            alert("Error copying to clipboard:" + err);
+            alert("Error copying to clipboard: " + err);
         }
     };
 
