@@ -25,7 +25,6 @@ export const CopyTextButton = ({ copyText, testId, text }: CopyTextButtonProps) 
                 setIsOpen(true);
             } else {
                 alert("Error copying to clipboard.");
-                console.log("after alert");
             }
         } catch (err) {
             alert("Error copying to clipboard: " + err);
