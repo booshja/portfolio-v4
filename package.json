@@ -14,10 +14,11 @@
         "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
     },
     "dependencies": {
-        "next": "14.0.4",
+        "@vercel/speed-insights": "^1.0.5",
+        "next": "^14.1.0",
         "next-plausible": "^3.12.0",
-        "react": "^18",
-        "react-dom": "^18",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "styled-components": "^6.1.6"
     },
     "devDependencies": {
@@ -29,7 +30,7 @@
         "@types/react": "^18",
         "@types/react-dom": "^18",
         "eslint": "^8",
-        "eslint-config-next": "14.0.4",
+        "eslint-config-next": "^14.1.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-import": "^2.29.1",
         "eslint-plugin-jest": "^27.6.0",

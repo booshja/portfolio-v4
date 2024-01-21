@@ -4,6 +4,7 @@ import StyledComponentsRegistry from "@/lib/registry";
 import type { Metadata } from "next";
 import "./globals.css";
 import { ConsoleLog, Copyright, Navbar } from "@/components/index";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -78,7 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en">
             <head>
-                <PlausibleProvider domain="jacobandes.dev" />
+                <PlausibleProvider domain="jacobandes.dev" trackOutboundLinks />
             </head>
             <body
                 className={inter.className}
@@ -90,6 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     {children}
                     <Copyright />
                 </StyledComponentsRegistry>
+                <SpeedInsights />
             </body>
         </html>
     );
