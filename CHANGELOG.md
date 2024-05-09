@@ -1,3 +1,13 @@
+### 2.1.0 (2024-05-09)
+
+##### Chores
+
+*  Update all dependencies (a2dbbf7c)
+
+##### New Features
+
+*  Add kotlin and ktor to skills (bc3f2ca1)
+
 ## 2.0.0 (2024-01-21)
 
 ##### Chores
