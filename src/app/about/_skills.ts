@@ -8,6 +8,8 @@ export default {
         { skill: "Storybook", id: crypto.randomUUID() },
         { skill: "React Testing Library", id: crypto.randomUUID() },
         { skill: "Jest", id: crypto.randomUUID() },
+        { skill: "Kotlin", id: crypto.randomUUID() },
+        { skill: "Ktor", id: crypto.randomUUID() },
         { skill: "Java", id: crypto.randomUUID() },
         { skill: "Spring Boot", id: crypto.randomUUID() },
         { skill: "Ruby", id: crypto.randomUUID() },
