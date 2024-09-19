@@ -25,26 +25,35 @@ export const projects: Project[] = [
         position: 1,
         name: "Smartsheet",
         type: "job",
-        title: "Software Engineer I",
+        title: "Software Engineer II",
         description:
-            "TypeScript, React, Emotion, Redux Toolkit, Backbone/CoffeeScript, Ruby, Rails, Terraform, Java, Spring, AWS",
+            "TypeScript, React, Emotion, Kotlin, Ktor, Terraform, Java, Spring, AWS, Redux Toolkit, Backbone/CoffeeScript, Ruby, Rails",
         imageName: "smartsheet",
     },
     {
         id: crypto.randomUUID(),
         position: 2,
+        name: "Smartsheet",
+        type: "job",
+        title: "Software Engineer I",
+        description:
+            "TypeScript, React, Emotion, Kotlin, Ktor, Terraform, Java, Spring, AWS, Redux Toolkit, Backbone/CoffeeScript, Ruby, Rails",
+        imageName: "smartsheet",
+    },
+    {
+        id: crypto.randomUUID(),
+        position: 3,
         name: "Portfolio",
         type: "project",
         codeLink: "https://github.com/booshja/portfolio-v4",
         liveLink: "https://jacobandes.dev",
         description:
             "TypeScript, Next.js, styled-components, Plausable Analytics, Vercel",
-        // imageName: 'portfolio',
-        imageName: "default",
+        imageName: "portfolio",
     },
     {
         id: crypto.randomUUID(),
-        position: 3,
+        position: 4,
         name: "Happy Harmony",
         type: "project",
         codeLink: "https://github.com/booshja/happy-harmony",
@@ -56,7 +65,7 @@ export const projects: Project[] = [
     },
     {
         id: crypto.randomUUID(),
-        position: 4,
+        position: 5,
         name: "Previous Portfolio",
         type: "project",
         codeLink: "https://github.com/booshja/portfolio-v3-next",
@@ -67,7 +76,7 @@ export const projects: Project[] = [
     },
     {
         id: crypto.randomUUID(),
-        position: 5,
+        position: 6,
         name: "Bttn",
         type: "job",
         title: "Software Engineer II",
@@ -77,7 +86,7 @@ export const projects: Project[] = [
     },
     {
         id: crypto.randomUUID(),
-        position: 6,
+        position: 7,
         name: "import/from Blog",
         type: "project",
         codeLink: null,
