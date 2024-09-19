@@ -1,3 +1,10 @@
+#### 2.1.1 (2024-09-19)
+
+##### New Features
+
+*  Update deps (ce0ee997)
+*  Update deps (42279a5f)
+
 ### 2.1.0 (2024-05-09)
 
 ##### Chores
