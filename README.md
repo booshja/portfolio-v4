@@ -62,6 +62,6 @@ To run tests, run the following command
 
 For support, email [jacob.andes@gmail.com](mailto:jacob.andes@gmail.com).
 
-## Authors
+## Author
 
 -   [@booshja](https://www.github.com/booshja)

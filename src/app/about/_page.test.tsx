@@ -18,7 +18,7 @@ describe("About Page", () => {
         expect(screen.getByTestId(testIds.skillsHeader)).toBeInTheDocument();
         expect(screen.getAllByTestId(testIds.skillUsageHeader)).toHaveLength(3);
         expect(screen.getAllByTestId(testIds.skillList)).toHaveLength(3);
-        expect(screen.getAllByTestId(testIds.skillListItem)).toHaveLength(46);
-        expect(screen.getAllByTestId(testIds.skillListItemText)).toHaveLength(46);
+        expect(screen.getAllByTestId(testIds.skillListItem)).toHaveLength(48);
+        expect(screen.getAllByTestId(testIds.skillListItemText)).toHaveLength(48);
     });
 });

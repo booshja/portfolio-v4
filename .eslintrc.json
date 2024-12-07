@@ -2,13 +2,13 @@
     "root": true,
     "ignorePatterns": ["**/*"],
     "plugins": [],
+    "extends": ["plugin:@next/next/recommended"],
     "overrides": [
         {
             "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
             "extends": [
                 "eslint:recommended",
-                "next/core-web-vitals",
-                "plugin: react/recommended",
+                "plugin:react/recommended",
                 "plugin:react-hooks/recommended",
                 "plugin:@typescript-eslint/recommended",
                 "plugin:@typescript-eslint/recommended-requiring-type-checking",

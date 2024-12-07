@@ -1,3 +1,15 @@
+### 2.2.0 (2024-12-07)
+
+##### Chores
+
+*  Bump nextjs version (901911de)
+*  Update tests, eslintrc file (cbbcf49b)
+
+##### New Features
+
+*  Update Uses page and tests (03cf2ad8)
+*  Integrate database and vercel feature flag system (e75e745e)
+
 ### 2.1.0 (2024-05-09)
 
 ##### Chores
