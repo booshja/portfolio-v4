@@ -86,7 +86,7 @@ export default function Uses() {
                 </li>
                 <li data-testid={testIds.softwareListItem}>
                     <p data-testid={testIds.softwareListItemParagraph}>
-                        I&apos;m currently using Fire Code for my font in both my
+                        I&apos;m currently using Fira Code for my font in both my
                         editors as well as my terminal
                     </p>
                 </li>
@@ -98,12 +98,18 @@ export default function Uses() {
                             inline
                             testId={testIds.softwareListItemExternalLink}
                         />{" "}
-                        is my daily terminal, with Base 16 Material for the theme
+                        is my daily terminal, with iterm for the theme
                     </p>
                 </li>
                 <li data-testid={testIds.softwareListItem}>
                     <p data-testid={testIds.softwareListItemParagraph}>
-                        Chrome is my daily browser, however I also use Firefox and
+                        <ExternalLink
+                            href="https://arc.net"
+                            text="Arc"
+                            inline
+                            testId={testIds.softwareListItemExternalLink}
+                        />{" "}
+                        is my daily browser, however I also use Chrome, Firefox and
                         Safari for testing
                     </p>
                 </li>
@@ -173,16 +179,13 @@ export default function Uses() {
                 </li>
                 <li data-testid={testIds.hardwareListItem}>
                     <p data-testid={testIds.hardwareListItemParagraph}>
-                        My chair is from RapidX (which I was given and plan on
-                        replacing) with a Samsonite Lumbar Support Pillow for my lower
-                        back. I also swapped out the wheels on it for Roller Blade
-                        wheels
+                        My chair is a Herman Miller Aeron Size C
                     </p>
                 </li>
                 <li data-testid={testIds.hardwareListItem}>
                     <p data-testid={testIds.hardwareListItemParagraph}>
                         I have a Dpforest 2.5Hp Walking Pad Treadmill that I use under
-                        my desk to walk as I work and keep moving!
+                        my desk to walk as I work to keep moving!
                     </p>
                 </li>
                 <li data-testid={testIds.hardwareListItem}>
@@ -192,13 +195,19 @@ export default function Uses() {
                 </li>
                 <li data-testid={testIds.hardwareListItem}>
                     <p data-testid={testIds.hardwareListItemParagraph}>
-                        My keyboard is an Apple Magic Keyboard with Touch ID and Numeric
-                        Pad
+                        My keyboard is a{" "}
+                        <ExternalLink
+                            href="https://www.zsa.io/voyager"
+                            text="ZSA Voyager"
+                            testId={testIds.softwareListItemExternalLink}
+                            inline
+                        />{" "}
+                        with Kailh Low Profile Choc Red Switches
                     </p>
                 </li>
                 <li data-testid={testIds.hardwareListItem}>
                     <p data-testid={testIds.hardwareListItemParagraph}>
-                        My mouse is an Apple Magic Mouse
+                        My mouse is a Logitech MX Master 3S for Mac
                     </p>
                 </li>
                 <li data-testid={testIds.hardwareListItem}>
