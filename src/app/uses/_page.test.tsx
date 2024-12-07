@@ -27,7 +27,7 @@ describe("Uses Page", () => {
         );
         expect(
             screen.getAllByTestId(testIds.softwareListItemExternalLink)
-        ).toHaveLength(3);
+        ).toHaveLength(5);
 
         expect(screen.getByTestId(testIds.hardwareSectionHeader)).toBeInTheDocument();
         expect(screen.getByTestId(testIds.hardwareList)).toBeInTheDocument();
