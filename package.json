@@ -14,17 +14,24 @@
         "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch && git push origin && git push origin --tags"
     },
     "dependencies": {
+        "@vercel/edge-config": "^1.4.0",
+        "@vercel/flags": "^2.6.3",
         "@vercel/speed-insights": "^1.0.10",
+        "bcryptjs": "^2.4.3",
+        "mongodb": "^6.11.0",
+        "mongoose": "^8.8.3",
         "next": "^14.2.3",
         "next-plausible": "^3.12.0",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
-        "styled-components": "^6.1.10"
+        "styled-components": "^6.1.10",
+        "zod": "^3.23.8"
     },
     "devDependencies": {
         "@testing-library/jest-dom": "^6.4.5",
         "@testing-library/react": "^15.0.7",
         "@testing-library/user-event": "^14.5.2",
+        "@types/bcryptjs": "^2.4.6",
         "@types/jest": "^29.5.12",
         "@types/node": "^20.12.11",
         "@types/react": "^18.3.1",
