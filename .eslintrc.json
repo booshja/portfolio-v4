@@ -16,7 +16,7 @@
                 "plugin:storybook/recommended",
                 "prettier"
             ],
-            "plugins": ["import", "jest", "typescript-sort-keys", "unused-imports"]
+            "plugins": ["import", "jest", "unused-imports"]
         },
         {
             "files": ["*.ts", "*.tsx"],
@@ -95,13 +95,6 @@
                 "react/no-array-index-key": "error",
                 "react/prop-types": "off",
                 "react/self-closing-comp": "error",
-                "typescript-sort-keys/interface": [
-                    "error",
-                    "asc",
-                    {
-                        "requiredFirst": true
-                    }
-                ],
                 "unused-imports/no-unused-imports": "error"
             }
         },
