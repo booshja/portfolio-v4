@@ -11,6 +11,13 @@ const config = {
     setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
     testEnvironment: "jest-environment-jsdom",
     preset: "ts-jest",
+    transformIgnorePatterns: [
+        "node_modules/(?!(jose|@vercel/flags|@vercel/edge-config)/)",
+    ],
+    moduleNameMapper: {
+        "^@vercel/flags/next$": "<rootDir>/src/testing/__mocks__/vercelFlagsNext.ts",
+        "^@vercel/edge-config$": "<rootDir>/src/testing/__mocks__/edgeConfigMock.ts",
+    },
     coverageDirectory: "coverage",
     coverageThreshold: {
         global: {
