@@ -6,7 +6,7 @@ export const ContactDocumentSchema = z.object({
     name: z.string().trim().min(1).max(255),
     email: z.string().trim().min(1).max(255).email(),
     message: z.string().trim().min(1).max(1500),
-    createdAt: z.date().default(new Date()),
+    createdAt: z.date().default(() => new Date()),
 });
 
 export type Contact = z.infer<typeof ContactDocumentSchema>;

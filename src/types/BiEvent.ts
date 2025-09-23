@@ -8,7 +8,7 @@ export const BIEventDocumentSchema = z.object({
     eventAction: z.string().min(1).max(255),
     targetName: z.string().min(1).max(255),
     options: z.string().min(1).max(255).optional(),
-    createdAt: z.date().default(new Date()),
+    createdAt: z.date().default(() => new Date()),
 });
 
 export type BIEvent = z.infer<typeof BIEventDocumentSchema>;
