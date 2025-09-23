@@ -17,8 +17,9 @@ describe("Contact Page", () => {
             );
         });
 
-        it("should render the page correctly", () => {
-            render(<ContactPage />);
+        it("should render the page correctly", async () => {
+            const ui = await ContactPage();
+            render(ui);
 
             expect(screen.getByTestId(testIds.container)).toBeInTheDocument();
 
