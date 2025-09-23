@@ -15,6 +15,9 @@ const config = {
         "node_modules/(?!(jose|@vercel/flags|@vercel/edge-config)/)",
     ],
     moduleNameMapper: {
+        // Preserve Next.js/tsconfig path alias for src
+        "^@/(.*)$": "<rootDir>/src/$1",
+        // Mocks for ESM packages used in tests
         "^@vercel/flags/next$": "<rootDir>/src/testing/__mocks__/vercelFlagsNext.ts",
         "^@vercel/edge-config$": "<rootDir>/src/testing/__mocks__/edgeConfigMock.ts",
     },
