@@ -1,4 +1,7 @@
+import type { Metadata } from "next";
+
 import testingIds from "@/testing/testingIds";
+
 import { ExternalLink } from "../_components";
 import {
     HardwareListStyled,
@@ -12,12 +15,11 @@ import {
     SoftwareSectionHeaderThirdWordStyled,
     UsesPageContainerStyled,
 } from "./_pageStyled";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Uses Page - Jacob Andes",
     description:
         "Uses page for Jacob Andes, software engineer based in the United States.",
+    title: "Uses Page - Jacob Andes",
 };
 
 const testIds = testingIds.pages.uses;

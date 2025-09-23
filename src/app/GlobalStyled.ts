@@ -1,7 +1,8 @@
 "use client";
 
-import { breakpoints, spacing } from "@/utils/constants";
 import styled, { css, keyframes } from "styled-components";
+
+import { breakpoints, spacing } from "@/utils/constants";
 
 export const PageContainerStyled = styled.main`
     padding: ${spacing.sm}px ${spacing.lg}px ${spacing.lg}px ${spacing.lg}px;

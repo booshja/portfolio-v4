@@ -1,7 +1,9 @@
 import { screen, render } from "@testing-library/react";
-import ContactPage from "./page";
+
 import testingIds from "@/testing/testingIds";
 import * as contactFormFlag from "@/utils/featureFlags";
+
+import ContactPage from "./page";
 jest.mock("@/utils/featureFlags", () => ({
     __esModule: true,
     showContactForm: jest.fn(),

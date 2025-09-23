@@ -1,3 +1,5 @@
+import testingIds from "@/testing/testingIds";
+
 import {
     FirstNameStyled,
     JobTitleStyled,
@@ -5,7 +7,6 @@ import {
     LastNameStyled,
     NameStyled,
 } from "./LandingPageStyled";
-import testingIds from "@/testing/testingIds";
 
 const testIds = testingIds.pages.landing;
 

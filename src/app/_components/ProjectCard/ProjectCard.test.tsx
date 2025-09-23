@@ -1,28 +1,30 @@
 import { screen, render } from "@testing-library/react";
-import { ProjectCard } from "./";
-import testingIds from "@/testing/testingIds";
+
 import type { Project } from "@/app/experience/_projects";
+import testingIds from "@/testing/testingIds";
+
+import { ProjectCard } from "./";
 
 const testIds = testingIds.components.projectCard;
 
 const jobProject: Project = {
+    description: "Test Description",
     id: "abcd123",
+    imageName: "default",
     name: "Test Project",
     position: 1,
-    type: "job",
     title: "Test Title",
-    description: "Test Description",
-    imageName: "default",
+    type: "job",
 };
 const projectProject: Project = {
+    codeLink: "https://github.com",
+    description: "Test Description",
     id: "abcd123",
+    imageName: "default",
+    liveLink: "https://github.com",
     name: "Test Project",
     position: 1,
     type: "project",
-    codeLink: "https://github.com",
-    liveLink: "https://github.com",
-    description: "Test Description",
-    imageName: "default",
 };
 
 describe("ProjectCard Component", () => {

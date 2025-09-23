@@ -1,8 +1,11 @@
 "use client";
 
 import testingIds from "@/testing/testingIds";
+import { strings } from "@/utils/constants";
+
 import { Copyright } from "../../Copyright";
 import { Socials } from "../../Socials";
+import { MobileExternalNavLink } from "../MobileExternalNavLink";
 import {
     ClosingButtonStyled,
     ContainerStyled,
@@ -11,8 +14,6 @@ import {
     NavLinkStyled,
     NavListStyled,
 } from "./MobileNavStyled";
-import { MobileExternalNavLink } from "../MobileExternalNavLink";
-import { strings } from "@/utils/constants";
 
 interface MobileNavProps {
     isOpen: boolean;
@@ -21,7 +22,7 @@ interface MobileNavProps {
 
 const testIds = testingIds.components.nav.mobileNav;
 
-export const MobileNav = ({ isOpen, handleMenuClose }: MobileNavProps) => (
+export const MobileNav = ({ handleMenuClose, isOpen }: MobileNavProps) => (
     <ContainerStyled $isOpen={isOpen} data-testid={testIds.container}>
         <ClosingButtonStyled
             onClick={handleMenuClose}

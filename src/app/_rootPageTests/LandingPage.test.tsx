@@ -1,5 +1,7 @@
 import { render, screen } from "@testing-library/react";
+
 import testingIds from "@/testing/testingIds";
+
 import LandingPage from "../page";
 
 const testIds = testingIds.pages.landing;

@@ -1,8 +1,10 @@
-import testingIds from "@/testing/testingIds";
 import Image from "next/image";
+
 import Github from "@/public/icons/github-white.svg";
 import LinkedIn from "@/public/icons/linkedin-white.svg";
+import testingIds from "@/testing/testingIds";
 import { breakpoints, spacing, strings } from "@/utils/constants";
+
 import {
     SocialsContainerStyled,
     SocialsDividerStyled,

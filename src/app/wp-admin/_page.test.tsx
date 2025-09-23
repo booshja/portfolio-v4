@@ -1,6 +1,8 @@
 import { screen, render } from "@testing-library/react";
-import WPAdminPage from "./page";
+
 import testingIds from "@/testing/testingIds";
+
+import WPAdminPage from "./page";
 
 const testIds = testingIds.pages.wpAdmin;
 

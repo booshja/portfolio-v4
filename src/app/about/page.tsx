@@ -1,7 +1,9 @@
-import testingIds from "@/testing/testingIds";
-import skills from "./_skills";
+import type { Metadata } from "next";
 import Image from "next/image";
+
 import MeAtTMobile from "@/public/images/me-at-tmobile.jpeg";
+import testingIds from "@/testing/testingIds";
+
 import {
     AboutPageContainerStyled,
     ContentStyled,
@@ -16,12 +18,12 @@ import {
     SkillUsageHeaderStyled,
     TextContainerStyled,
 } from "./_pageStyled";
-import type { Metadata } from "next";
+import skills from "./_skills";
 
 export const metadata: Metadata = {
-    title: "About/Skills - Jacob Andes",
     description:
         "About me and skills for Jacob Andes, software engineer based in the United States.",
+    title: "About/Skills - Jacob Andes",
 };
 
 const testIds = testingIds.pages.about;
@@ -61,7 +63,7 @@ export default function About() {
                         Daily Usage
                     </SkillUsageHeaderStyled>
                     <SkillListStyled data-testid={testIds.skillList}>
-                        {skills.dailyUsage.map(({ skill, id }) => (
+                        {skills.dailyUsage.map(({ id, skill }) => (
                             <li key={id} data-testid={testIds.skillListItem}>
                                 <p data-testid={testIds.skillListItemText}>{skill}</p>
                             </li>
@@ -71,7 +73,7 @@ export default function About() {
                         Worked With
                     </SkillUsageHeaderStyled>
                     <SkillListStyled data-testid={testIds.skillList}>
-                        {skills.workedWith.map(({ skill, id }) => (
+                        {skills.workedWith.map(({ id, skill }) => (
                             <li key={id} data-testid={testIds.skillListItem}>
                                 <p data-testid={testIds.skillListItemText}>{skill}</p>
                             </li>
@@ -81,7 +83,7 @@ export default function About() {
                         Experimented With
                     </SkillUsageHeaderStyled>
                     <SkillListStyled data-testid={testIds.skillList}>
-                        {skills.experimentedWith.map(({ skill, id }) => (
+                        {skills.experimentedWith.map(({ id, skill }) => (
                             <li key={id} data-testid={testIds.skillListItem}>
                                 <p data-testid={testIds.skillListItemText}>{skill}</p>
                             </li>

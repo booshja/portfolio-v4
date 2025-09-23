@@ -1,6 +1,8 @@
 import { screen, render, waitFor } from "@testing-library/react";
-import { InfoTooltip } from "./";
+
 import testingIds from "@/testing/testingIds";
+
+import { InfoTooltip } from "./";
 
 const testIds = testingIds.components.tooltip;
 

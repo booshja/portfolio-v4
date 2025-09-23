@@ -1,6 +1,10 @@
-import { ExternalLink } from "../ExternalLink";
 import Image from "next/image";
+
+import type { Project } from "@/app/experience/_projects";
 import testingIds from "@/testing/testingIds";
+import { getProjectImage } from "@/utils/helpers";
+
+import { ExternalLink } from "../ExternalLink";
 import {
     CardStyled,
     DescriptionStyled,
@@ -12,22 +16,20 @@ import {
     PositionStyled,
     TextSectionStyled,
 } from "./ProjectCardStyled";
-import type { Project } from "@/app/experience/_projects";
-import { getProjectImage } from "@/utils/helpers";
 
 interface ProjectCardProps extends Project {}
 
 const testIds = testingIds.components.projectCard;
 
 export const ProjectCard = ({
-    name,
-    position,
-    type,
     codeLink,
-    liveLink,
-    title,
     description,
     imageName,
+    liveLink,
+    name,
+    position,
+    title,
+    type,
 }: ProjectCardProps) => {
     const reverseAlignment = position % 2 === 0;
 
@@ -86,9 +88,9 @@ export const ProjectCard = ({
                     fill
                     sizes="80vw"
                     style={{
-                        objectFit: "cover",
                         boxShadow:
                             "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
+                        objectFit: "cover",
                     }}
                     data-testid={testIds.image}
                 />

@@ -1,8 +1,10 @@
 import Image from "next/image";
-import ExternalLinkImage from "@/public/icons/external-link.svg";
+
 import ExternalLinkImageBlack from "@/public/icons/external-link-black.svg";
-import { ExternalLinkStyled, ImageContainerStyled } from "./ExternalLinkStyled";
+import ExternalLinkImage from "@/public/icons/external-link.svg";
 import testingIds from "@/testing/testingIds";
+
+import { ExternalLinkStyled, ImageContainerStyled } from "./ExternalLinkStyled";
 
 interface ExternalLinkProps {
     href: string;
@@ -15,11 +17,11 @@ interface ExternalLinkProps {
 const testIds = testingIds.components.externalLink;
 
 export const ExternalLink = ({
-    href,
-    text,
-    testId,
-    inline = false,
     card = false,
+    href,
+    inline = false,
+    testId,
+    text,
 }: ExternalLinkProps) => (
     <ExternalLinkStyled
         href={href}
@@ -34,7 +36,7 @@ export const ExternalLink = ({
                 src={card ? ExternalLinkImageBlack : ExternalLinkImage}
                 alt="Link opens in external tab"
                 fill
-                style={{ objectFit: "contain", aspectRatio: "1/1" }}
+                style={{ aspectRatio: "1/1", objectFit: "contain" }}
                 data-testid={testIds.image}
             />
         </ImageContainerStyled>

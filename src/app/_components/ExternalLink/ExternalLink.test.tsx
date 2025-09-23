@@ -1,6 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import { ExternalLink } from "./ExternalLink";
+
 import testingIds from "@/testing/testingIds";
+
+import { ExternalLink } from "./ExternalLink";
 
 const testIds = testingIds.components.externalLink;
 

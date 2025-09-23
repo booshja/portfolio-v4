@@ -1,6 +1,7 @@
 "use client";
 
 import styled from "styled-components";
+
 import { breakpoints, colors, spacing } from "@/utils/constants";
 
 export const CopyTextButtonStyled = styled.button`

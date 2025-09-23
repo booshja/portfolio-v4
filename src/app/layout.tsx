@@ -1,21 +1,30 @@
-import { Inter } from "next/font/google";
-import PlausibleProvider from "next-plausible";
-import StyledComponentsRegistry from "@/lib/registry";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
+import PlausibleProvider from "next-plausible";
+import { Inter } from "next/font/google";
+
 import "./globals.css";
 import { ConsoleLog, Copyright, Navbar } from "@/components/index";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import StyledComponentsRegistry from "@/lib/registry";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Jacob Andes - Software Engineer",
+    alternates: {
+        canonical: "/",
+    },
+    applicationName: "Jacob Andes Personal Portfolio",
+    authors: [{ name: "Jacob Andes", url: "https://github.com/booshja" }],
+    category: "technology",
+    creator: "Jacob Andes",
     description:
         "Personal portfolio for Jacob Andes, software engineer based in the United States.",
+    formatDetection: {
+        address: false,
+        email: false,
+        telephone: false,
+    },
     generator: "Next.js",
-    applicationName: "Jacob Andes Personal Portfolio",
-    category: "technology",
-    referrer: "origin-when-cross-origin",
     keywords: [
         "Jacob",
         "Andes",
@@ -29,17 +38,8 @@ export const metadata: Metadata = {
         "TypeScript",
         "Styled Components",
     ],
-    authors: [{ name: "Jacob Andes", url: "https://github.com/booshja" }],
-    creator: "Jacob Andes",
     publisher: "Jacob Andes",
-    formatDetection: {
-        email: false,
-        address: false,
-        telephone: false,
-    },
-    alternates: {
-        canonical: "/",
-    },
+    referrer: "origin-when-cross-origin",
     // openGraph: {
     //     title: "Jacob Andes - Software Engineer",
     //     description:
@@ -61,18 +61,19 @@ export const metadata: Metadata = {
     //     },
     // },
     robots: {
-        index: true,
         follow: true,
-        nocache: true,
         googleBot: {
-            index: true,
             follow: true,
-            noimageindex: true,
-            "max-video-preview": -1,
+            index: true,
             "max-image-preview": "large",
             "max-snippet": -1,
+            "max-video-preview": -1,
+            noimageindex: true,
         },
+        index: true,
+        nocache: true,
     },
+    title: "Jacob Andes - Software Engineer",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,12 +1,14 @@
 "use client";
 
+import Image from "next/image";
+
+import ExternalLink from "@/public/icons/external-link.svg";
+
 import {
     ANavLinkStyled,
     ImageContainerStyled,
     NextNavLinkStyled,
 } from "./NavLinkStyled";
-import ExternalLink from "@/public/icons/external-link.svg";
-import Image from "next/image";
 
 interface NavLinkProps {
     href: string;
@@ -17,11 +19,11 @@ interface NavLinkProps {
 }
 
 export const NavLink = ({
-    href,
-    text,
-    testId,
-    pathname,
     external = false,
+    href,
+    pathname,
+    testId,
+    text,
 }: NavLinkProps) => {
     const activePath = pathname?.split("/")[1];
     const activeText = text.split("/")[0];

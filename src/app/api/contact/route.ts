@@ -1,7 +1,8 @@
+import { NextRequest } from "next/server";
+
 import { connectDB } from "@/lib/mongodb";
 import Contact from "@/models/Contact";
 import { ContactRequestSchema } from "@/types";
-import { NextRequest } from "next/server";
 
 export const POST = async (request: NextRequest) => {
     const requestData = await request.json();

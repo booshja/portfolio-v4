@@ -1,10 +1,12 @@
 "use client";
 
-import { CopyTextButtonStyled } from "./CopyTextButtonStyled";
-import { InfoTooltip } from "../Tooltips/InfoTooltip";
-import { useState } from "react";
-import Copy from "@/public/icons/export-copy-white.svg";
 import Image from "next/image";
+import { useState } from "react";
+
+import Copy from "@/public/icons/export-copy-white.svg";
+
+import { InfoTooltip } from "../Tooltips/InfoTooltip";
+import { CopyTextButtonStyled } from "./CopyTextButtonStyled";
 
 interface CopyTextButtonProps {
     copyText: string;

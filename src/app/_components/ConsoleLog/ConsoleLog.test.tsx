@@ -1,4 +1,5 @@
-import { screen, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
+
 import { ConsoleLog } from "./";
 
 describe("ConsoleLog Component", () => {

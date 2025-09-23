@@ -1,8 +1,10 @@
 "use client";
 
-import testingIds from "@/testing/testingIds";
-import { InfoTooltipStyled } from "./InfoTooltipStyled";
 import { useEffect } from "react";
+
+import testingIds from "@/testing/testingIds";
+
+import { InfoTooltipStyled } from "./InfoTooltipStyled";
 
 interface InfoTooltipProps {
     text: string;
@@ -12,7 +14,7 @@ interface InfoTooltipProps {
 
 const testIds = testingIds.components.tooltip;
 
-export const InfoTooltip = ({ text, isOpen, setIsOpen }: InfoTooltipProps) => {
+export const InfoTooltip = ({ isOpen, setIsOpen, text }: InfoTooltipProps) => {
     useEffect(() => {
         if (!isOpen) return;
         const timeout = setTimeout(() => {

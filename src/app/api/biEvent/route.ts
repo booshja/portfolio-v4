@@ -1,7 +1,8 @@
+import { NextRequest } from "next/server";
+
 import { connectDB } from "@/lib/mongodb";
 import BIEventModel from "@/models/BIEvent";
-import { type BIEvent, BIEventRequestSchema } from "@/types";
-import { NextRequest } from "next/server";
+import { BIEventRequestSchema } from "@/types";
 
 export const POST = async (request: NextRequest) => {
     const requestData = await request.json();

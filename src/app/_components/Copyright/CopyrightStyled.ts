@@ -1,7 +1,8 @@
 "use client";
 
-import { breakpoints, colors, spacing } from "@/utils/constants";
 import styled from "styled-components";
+
+import { breakpoints, colors, spacing } from "@/utils/constants";
 
 export const CopyrightFooterStyled = styled.footer`
     display: flex;

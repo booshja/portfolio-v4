@@ -1,7 +1,8 @@
 "use client";
 
-import { ProjectCard } from "../ProjectCard";
 import type { Project } from "@/app/experience/_projects";
+
+import { ProjectCard } from "../ProjectCard";
 
 interface ProjectCardProps {
     projects: Project[];

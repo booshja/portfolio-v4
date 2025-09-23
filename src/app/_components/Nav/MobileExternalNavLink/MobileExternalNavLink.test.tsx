@@ -1,6 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import { MobileExternalNavLink } from "./MobileExternalNavLink";
+
 import testingIds from "@/testing/testingIds";
+
+import { MobileExternalNavLink } from "./MobileExternalNavLink";
 
 const testIds = testingIds.components.mobileExternalNavLink;
 

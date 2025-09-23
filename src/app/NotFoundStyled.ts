@@ -1,8 +1,10 @@
 "use client";
 
-import styled from "styled-components";
-import { colors, spacing } from "@/utils/constants";
 import Link from "next/link";
+import styled from "styled-components";
+
+import { colors, spacing } from "@/utils/constants";
+
 import { PageContainerStyled } from "./GlobalStyled";
 
 export const NotFoundContainerStyled = styled(PageContainerStyled)`

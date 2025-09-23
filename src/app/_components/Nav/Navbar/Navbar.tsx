@@ -1,6 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+
+import Mountain from "@/public/icons/mountain-dark.svg";
+import testingIds from "@/testing/testingIds";
+import { breakpoints, spacing, strings } from "@/utils/constants";
+
+import { NavLink } from "../";
+import { MobileNav } from "../MobileNav";
 import {
     LogoStyled,
     MobileNavButton,
@@ -9,13 +18,6 @@ import {
     NavSectionStyled,
     NavListStyled,
 } from "./NavbarStyled";
-import { NavLink } from "../";
-import Image from "next/image";
-import Mountain from "@/public/icons/mountain-dark.svg";
-import testingIds from "@/testing/testingIds";
-import { breakpoints, spacing, strings } from "@/utils/constants";
-import { MobileNav } from "../MobileNav";
-import { useState, useEffect } from "react";
 
 const testIds = testingIds.components.nav.navbar;
 
@@ -91,7 +93,7 @@ export const Navbar = () => {
                         alt="Mountain that opens mobile menu"
                         fill
                         sizes={`(max-width: ${breakpoints.mobileLg}) ${spacing.lg}px, ${spacing.xl}px`}
-                        style={{ objectFit: "contain", aspectRatio: "1/1" }}
+                        style={{ aspectRatio: "1/1", objectFit: "contain" }}
                         data-testid={testIds.navButtonImage}
                     />
                 </MobileNavButton>

@@ -1,6 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import { MobileNav } from "./";
+
 import testingIds from "@/testing/testingIds";
+
+import { MobileNav } from "./";
 
 const testIds = testingIds.components.nav.mobileNav;
 

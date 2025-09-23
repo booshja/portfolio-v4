@@ -1,8 +1,9 @@
 "use client";
 
-import { breakpoints, colors, fontWeight, spacing } from "@/utils/constants";
 import Link from "next/link";
 import styled from "styled-components";
+
+import { breakpoints, colors, fontWeight, spacing } from "@/utils/constants";
 
 export const LogoStyled = styled(Link)`
     text-decoration: none;

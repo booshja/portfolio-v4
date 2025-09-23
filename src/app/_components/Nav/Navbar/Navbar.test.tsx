@@ -1,6 +1,8 @@
 import { screen, render } from "@testing-library/react";
-import { Navbar } from "./";
+
 import testingIds from "@/testing/testingIds";
+
+import { Navbar } from "./";
 
 const testIds = testingIds.components.nav.navbar;
 
