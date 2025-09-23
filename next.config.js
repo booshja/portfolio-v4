@@ -5,9 +5,6 @@ const nextConfig = {
     compiler: {
         styledComponents: true,
     },
-    experimental: {
-        instrumentationHook: true,
-    },
     images: {
         domains: [],
     },
