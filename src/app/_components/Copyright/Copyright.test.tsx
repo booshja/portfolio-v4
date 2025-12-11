@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 
 import testingIds from "@/testing/testingIds";
 
-import { Copyright } from "./";
+import { Copyright } from "./Copyright";
 
 const testIds = testingIds.components.copyright;
 

@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 
-import { ConsoleLog } from "./";
+import { ConsoleLog } from "./ConsoleLog";
 
 describe("ConsoleLog Component", () => {
     it("console.logs the text", () => {

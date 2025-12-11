@@ -1,6 +1,6 @@
-import mongoose, { Schema, model } from "mongoose";
+import mongoose, { Schema, model, type Model } from "mongoose";
 
-import type { Contact as ContactType } from "@/types";
+import type { Contact as ContactType } from "@/types/Contact";
 
 const ContactSchema = new Schema<ContactType>(
     {
@@ -33,6 +33,7 @@ const ContactSchema = new Schema<ContactType>(
 );
 
 const Contact =
-    mongoose.models?.Contact || model<ContactType>("Contact", ContactSchema);
+    (mongoose.models?.Contact as Model<ContactType>) ||
+    model<ContactType>("Contact", ContactSchema);
 
 export default Contact;

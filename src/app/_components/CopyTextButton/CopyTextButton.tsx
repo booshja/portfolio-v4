@@ -3,9 +3,9 @@
 import Image from "next/image";
 import { useState } from "react";
 
-import Copy from "@/public/icons/export-copy-white.svg";
+const COPY_ICON_SRC = "/icons/export-copy-white.svg" as const;
 
-import { InfoTooltip } from "../Tooltips/InfoTooltip";
+import { InfoTooltip } from "../Tooltips/InfoTooltip/InfoTooltip";
 import { CopyTextButtonStyled } from "./CopyTextButtonStyled";
 
 interface CopyTextButtonProps {
@@ -34,13 +34,18 @@ export const CopyTextButton = ({ copyText, testId, text }: CopyTextButtonProps) 
     };
 
     return (
-        <CopyTextButtonStyled onClick={handleCopy} data-testid={testId}>
+        <CopyTextButtonStyled data-testid={testId} onClick={() => void handleCopy()}>
             {text}
-            <Image src={Copy} width={16} alt="Copy email address to clipboard" />
+            <Image
+                alt="Copy email address to clipboard"
+                height={16}
+                src={COPY_ICON_SRC}
+                width={16}
+            />
             <InfoTooltip
-                text="Copied to clipboard!"
                 isOpen={isOpen}
                 setIsOpen={setIsOpen}
+                text="Copied to clipboard!"
             />
         </CopyTextButtonStyled>
     );

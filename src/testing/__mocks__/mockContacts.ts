@@ -1,6 +1,7 @@
 import { ObjectId } from "mongodb";
 
-import type { Contact, ContactRequest } from "@/types";
+import type { Contact } from "@/types/Contact";
+import type { ContactRequest } from "@/types/Contact";
 
 export const CONTACTS_BASE: Contact[] = [
     {

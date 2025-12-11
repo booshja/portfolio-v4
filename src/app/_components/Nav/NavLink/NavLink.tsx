@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import ExternalLink from "@/public/icons/external-link.svg";
+const EXTERNAL_LINK_SRC = "/icons/external-link.svg" as const;
 
 import {
     ANavLinkStyled,
@@ -30,20 +30,20 @@ export const NavLink = ({
     const isActive = activePath === activeText;
 
     return external ? (
-        <ANavLinkStyled href={href} target="_blank" data-testid={testId}>
+        <ANavLinkStyled data-testid={testId} href={href} target="_blank">
             {text}
             <ImageContainerStyled>
                 <Image
-                    src={ExternalLink}
+                    alt="Link opens in external tab"
                     fill
                     sizes="24px"
-                    alt="Link opens in external tab"
+                    src={EXTERNAL_LINK_SRC}
                     style={{ objectFit: "contain" }}
                 />
             </ImageContainerStyled>
         </ANavLinkStyled>
     ) : (
-        <NextNavLinkStyled href={href} $active={isActive} data-testid={testId}>
+        <NextNavLinkStyled $active={isActive} data-testid={testId} href={href}>
             {text}
         </NextNavLinkStyled>
     );

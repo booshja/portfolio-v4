@@ -33,12 +33,10 @@ export default [
             "**/*.config.*",
         ],
     },
-
     // Base JS recommendations
     js.configs.recommended,
-
-    // TypeScript recommendations (non type-checked for smoother migration)
-    ...tseslint.configs.recommended,
+    // TypeScript recommendations (type-aware)
+    ...tseslint.configs.recommendedTypeChecked,
 
     // Bring in legacy-style shareable configs via compat for now
     ...compat.extends(
@@ -46,10 +44,9 @@ export default [
         "plugin:react-hooks/recommended",
         "plugin:jsx-a11y/recommended",
         "plugin:storybook/recommended",
-        "plugin:@next/next/recommended",
+        "next/core-web-vitals",
         "prettier"
     ),
-
     // Project-wide settings for TS type-aware rules
     {
         languageOptions: {
@@ -64,7 +61,6 @@ export default [
             },
         },
     },
-
     // App/Lib code
     {
         files: ["**/*.{ts,tsx,js,jsx}"],
@@ -82,7 +78,7 @@ export default [
             react: { version: "detect" },
         },
         rules: {
-            // Keep your existing customizations
+            "@typescript-eslint/consistent-type-imports": "error",
             "@typescript-eslint/explicit-function-return-type": "off",
             "@typescript-eslint/explicit-module-boundary-types": "off",
             "@typescript-eslint/no-empty-function": "off",
@@ -96,7 +92,6 @@ export default [
             ],
             "@typescript-eslint/prefer-includes": "off",
             "@typescript-eslint/restrict-plus-operands": "off",
-
             "jest/no-focused-tests": "error",
             "jsx-a11y/label-has-associated-control": ["error", { assert: "either" }],
             "no-empty-function": "off",
@@ -145,19 +140,10 @@ export default [
                 ],
             }),
             "no-useless-escape": "off",
-
-            // Relax a few strict TypeScript rules to reduce churn during migration
-            "@typescript-eslint/no-empty-object-type": "off",
-            "@typescript-eslint/require-await": "off",
-            "@typescript-eslint/no-misused-promises": [
-                "error",
-                { checksVoidReturn: { attributes: false } },
-            ],
-
-            // Avoid forcing HTML entity escapes in content-heavy pages
-            "react/no-unescaped-entities": "off",
-
-            // Replace import/order with perfectionist for ordering
+            "@typescript-eslint/no-empty-object-type": "error",
+            "@typescript-eslint/require-await": "error",
+            "@typescript-eslint/no-misused-promises": "error",
+            "react/no-unescaped-entities": "error",
             "import/order": "off",
             "perfectionist/sort-imports": [
                 "error",
@@ -170,19 +156,16 @@ export default [
                         "internal",
                         ["parent", "sibling", "index"],
                     ],
-                    // perfectionist handles spacing consistently by default; omit extra option
                 },
             ],
-
-            // Enable more perfectionist rules progressively
             "perfectionist/sort-objects": ["error", { type: "natural", order: "asc" }],
-            // Consider enabling later:
-            // 'perfectionist/sort-jsx-props': ['error', { type: 'natural', order: 'asc' }],
-            // 'perfectionist/sort-enums': ['error', { type: 'natural', order: 'asc' }],
+            "perfectionist/sort-jsx-props": [
+                "error",
+                { type: "natural", order: "asc" },
+            ],
+            "perfectionist/sort-enums": ["error", { type: "natural", order: "asc" }],
         },
     },
-
-    // Stories: relax hooks rules to match your legacy config
     {
         files: ["**/*.stories.*"],
         rules: {
@@ -190,8 +173,6 @@ export default [
             "react-hooks/exhaustive-deps": "off",
         },
     },
-
-    // Tests: align with your test overrides
     {
         files: ["**/*.{test,tests}.{ts,tsx,js,jsx}"],
         rules: {

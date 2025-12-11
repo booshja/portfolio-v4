@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import testingIds from "@/testing/testingIds";
 
-import { ExternalLink } from "../_components";
+import { ExternalLink } from "../_components/ExternalLink/ExternalLink";
 import {
     HardwareListStyled,
     HardwareSectionHeaderStyled,
@@ -32,23 +32,23 @@ export default function Uses() {
                 I&apos;m a fan of{" "}
                 <ExternalLink
                     href="https://syntax.fm"
-                    text="Syntax.fm"
                     inline
                     testId={testIds.descriptionExternalLink}
+                    text="Syntax.fm"
                 />
                 , and in following Wes Bos&apos;{" "}
                 <ExternalLink
                     href="https://wesbos.com/uses"
-                    text="uses page"
                     inline
                     testId={testIds.descriptionExternalLink}
+                    text="uses page"
                 />
                 , and his site{" "}
                 <ExternalLink
                     href="https://uses.tech"
-                    text="uses.tech"
                     inline
                     testId={testIds.descriptionExternalLink}
+                    text="uses.tech"
                 />
                 , this is my own uses page!
             </PageDescriptionStyled>
@@ -72,8 +72,8 @@ export default function Uses() {
             <SoftwareListStyled data-testid={testIds.softwareList}>
                 <li data-testid={testIds.softwareListItem}>
                     <p data-testid={testIds.softwareListItemParagraph}>
-                        For anything non-Java, Visual Studio Code is my current editor,
-                        along with a slew of extensions including GitHub CoPilot
+                        Cursor is my current daily driver editor, and VSCode for any
+                        non-AI driven work.
                     </p>
                 </li>
                 <li data-testid={testIds.softwareListItem}>
@@ -83,7 +83,8 @@ export default function Uses() {
                 </li>
                 <li data-testid={testIds.softwareListItem}>
                     <p data-testid={testIds.softwareListItemParagraph}>
-                        In both editors, I use Material Theme Palenight for my theme
+                        In both editors, I use a custom theme based on Material Theme
+                        Palenight
                     </p>
                 </li>
                 <li data-testid={testIds.softwareListItem}>
@@ -94,22 +95,17 @@ export default function Uses() {
                 </li>
                 <li data-testid={testIds.softwareListItem}>
                     <p data-testid={testIds.softwareListItemParagraph}>
-                        <ExternalLink
-                            href="https://www.warp.dev"
-                            text="Warp"
-                            inline
-                            testId={testIds.softwareListItemExternalLink}
-                        />{" "}
-                        is my daily terminal, with iterm for the theme
+                        iTerm2 is my daily terminal, with a custom theme also based on
+                        Material Theme Palenight
                     </p>
                 </li>
                 <li data-testid={testIds.softwareListItem}>
                     <p data-testid={testIds.softwareListItemParagraph}>
                         <ExternalLink
                             href="https://arc.net"
-                            text="Arc"
                             inline
                             testId={testIds.softwareListItemExternalLink}
+                            text="Arc"
                         />{" "}
                         is my daily browser, however I also use Chrome, Firefox and
                         Safari for testing
@@ -128,9 +124,9 @@ export default function Uses() {
                         I use{" "}
                         <ExternalLink
                             href="https://www.joshwcomeau.com/css/custom-css-reset/"
-                            text="Josh W. Comeau's CSS Reset"
                             inline
                             testId={testIds.softwareListItemExternalLink}
+                            text="Josh W. Comeau's CSS Reset"
                         />
                     </p>
                 </li>
@@ -139,9 +135,9 @@ export default function Uses() {
                         I use{" "}
                         <ExternalLink
                             href="https://www.raycast.com/"
-                            text="Raycast"
                             inline
                             testId={testIds.softwareListItemExternalLink}
+                            text="Raycast"
                         />{" "}
                         for searching, window management, and custom workflows on my
                         machine
@@ -160,17 +156,18 @@ export default function Uses() {
                 <li data-testid={testIds.hardwareListItem}>
                     <p data-testid={testIds.hardwareListItemParagraph}>
                         I have a butcher block countertop I found at Lowe&apos;s to
-                        which I attached an Autonomous "Pro by Wistopht" SmartDesk Frame
+                        which I attached an Autonomous &quot;Pro by Wistopht&quot;
+                        SmartDesk Frame
                     </p>
                 </li>
                 <li data-testid={testIds.hardwareListItem}>
                     <p data-testid={testIds.hardwareListItemParagraph}>
-                        My main monitor is a 32" 4K Samsung - UJ59 Series
+                        My main monitor is a 32&quot; 4K Samsung - UJ59 Series
                     </p>
                 </li>
                 <li data-testid={testIds.hardwareListItem}>
                     <p data-testid={testIds.hardwareListItemParagraph}>
-                        I additionally use a 24" Samsung - T350 Series monitor that
+                        I additionally use a 24&quot; Samsung - T350 Series monitor that
                         I&apos;ve rotated vertical
                     </p>
                 </li>
@@ -192,7 +189,7 @@ export default function Uses() {
                 </li>
                 <li data-testid={testIds.hardwareListItem}>
                     <p data-testid={testIds.hardwareListItemParagraph}>
-                        I currently use a 2021 14" MacBook Pro M1
+                        I currently use a 2021 14&quot; MacBook Pro M1
                     </p>
                 </li>
                 <li data-testid={testIds.hardwareListItem}>
@@ -200,11 +197,11 @@ export default function Uses() {
                         My keyboard is a{" "}
                         <ExternalLink
                             href="https://www.zsa.io/voyager"
-                            text="ZSA Voyager"
-                            testId={testIds.softwareListItemExternalLink}
                             inline
+                            testId={testIds.softwareListItemExternalLink}
+                            text="ZSA Voyager"
                         />{" "}
-                        with Kailh Low Profile Choc Red Switches
+                        with Lowprokb Ambients Twilight Silent Choc Low Profile Switches
                     </p>
                 </li>
                 <li data-testid={testIds.hardwareListItem}>
@@ -220,8 +217,9 @@ export default function Uses() {
                 </li>
                 <li data-testid={testIds.hardwareListItem}>
                     <p data-testid={testIds.hardwareListItemParagraph}>
-                        For headphones I use Sony WH-1000XM4 Wireless Noise-Cancelling
-                        Headphones
+                        For headphones I use Aipod Pros. Previously I used Sony
+                        WH-1000XM4 Wireless Noise-Cancelling Headphones before getting
+                        my ears gauged.
                     </p>
                 </li>
             </HardwareListStyled>

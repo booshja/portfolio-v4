@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import ExternalLinkImageBlack from "@/public/icons/external-link-black.svg";
-import ExternalLinkImage from "@/public/icons/external-link.svg";
+const EXTERNAL_LINK_BLACK_SRC = "/icons/external-link-black.svg" as const;
+const EXTERNAL_LINK_SRC = "/icons/external-link.svg" as const;
 import testingIds from "@/testing/testingIds";
 
 import { ExternalLinkStyled, ImageContainerStyled } from "./ExternalLinkStyled";
@@ -24,20 +24,21 @@ export const ExternalLink = ({
     text,
 }: ExternalLinkProps) => (
     <ExternalLinkStyled
+        $card={card}
+        $inline={inline}
+        data-testid={testId}
         href={href}
         target="_blank"
-        data-testid={testId}
-        $inline={inline}
-        $card={card}
     >
         {text}
         <ImageContainerStyled>
             <Image
-                src={card ? ExternalLinkImageBlack : ExternalLinkImage}
                 alt="Link opens in external tab"
-                fill
-                style={{ aspectRatio: "1/1", objectFit: "contain" }}
                 data-testid={testIds.image}
+                fill
+                sizes="24px"
+                src={card ? EXTERNAL_LINK_BLACK_SRC : EXTERNAL_LINK_SRC}
+                style={{ aspectRatio: "1/1", objectFit: "contain" }}
             />
         </ImageContainerStyled>
     </ExternalLinkStyled>

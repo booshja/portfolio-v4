@@ -29,13 +29,13 @@ export default function WPAdmin() {
     return (
         <WPAdminPageContainerStyled data-testid={testIds.container}>
             <Image
-                src={BugsNo}
                 alt="Bugs Bunny saying no meme"
-                priority
-                fill
-                sizes="100vw"
-                style={{ objectFit: "contain" }}
                 data-testid={testIds.image}
+                fill
+                priority
+                sizes="100vw"
+                src={BugsNo}
+                style={{ objectFit: "contain" }}
             />
         </WPAdminPageContainerStyled>
     );

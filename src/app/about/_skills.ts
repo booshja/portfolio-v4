@@ -1,4 +1,4 @@
-export default {
+const skills = {
     dailyUsage: [
         { id: crypto.randomUUID(), skill: "Typescript" },
         { id: crypto.randomUUID(), skill: "Emotion" },
@@ -54,3 +54,5 @@ export default {
         { id: crypto.randomUUID(), skill: "Auth0" },
     ],
 };
+
+export default skills;

@@ -1,6 +1,6 @@
 import { ObjectId } from "mongodb";
 
-import type { BIEvent } from "@/types";
+import type { BIEvent } from "@/types/BiEvent";
 
 const BI_EVENTS_BASE: BIEvent[] = [
     {

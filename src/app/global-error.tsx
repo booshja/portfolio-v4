@@ -49,11 +49,11 @@ export default function Error(_error: Error & { digest?: string }) {
                 style={{ aspectRatio: "1.5 / 1", position: "relative", width: "80vw" }}
             >
                 <Image
-                    src={SadIceCream}
-                    priority
-                    fill
-                    style={{ objectFit: "contain" }}
                     alt="A dropped waffle cone ice cream cone on a slab of rock with ice cream spilled out of it."
+                    fill
+                    priority
+                    src={SadIceCream}
+                    style={{ objectFit: "contain" }}
                 />
             </div>
         </div>

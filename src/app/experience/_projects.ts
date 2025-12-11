@@ -22,12 +22,32 @@ export type ImageName =
 export const projects: Project[] = [
     {
         description:
-            "TypeScript, React, Emotion, Redux Toolkit, Backbone/CoffeeScript, Ruby, Rails, Terraform, Java, Spring, AWS",
+            "TypeScript, React, Emotion, Redux, Java, Kotlin, Spring Boot, AWS",
         id: crypto.randomUUID(),
         imageName: "smartsheet",
         name: "Smartsheet",
         position: 1,
+        title: "Software Engineer II",
+        type: "job",
+    },
+    {
+        description:
+            "TypeScript, React, Emotion, Redux Toolkit, Backbone/CoffeeScript, Ruby, Rails, Terraform, Java, Kotlin, Ktor, Spring Boot, AWS",
+        id: crypto.randomUUID(),
+        imageName: "smartsheet",
+        name: "Smartsheet",
+        position: 2,
         title: "Software Engineer I",
+        type: "job",
+    },
+    {
+        description:
+            "Javascript, React, Redux Toolkit, RTK Query, Node, Express.js, styled-components, MongoDB, Auth0, Python, Django, PostgreSQL, Heroku",
+        id: crypto.randomUUID(),
+        imageName: "bttn",
+        name: "Bttn",
+        position: 3,
+        title: "Software Engineer II",
         type: "job",
     },
     {
@@ -39,7 +59,7 @@ export const projects: Project[] = [
         imageName: "default",
         liveLink: "https://jacobandes.dev",
         name: "Portfolio",
-        position: 2,
+        position: 4,
         type: "project",
     },
     {
@@ -51,7 +71,7 @@ export const projects: Project[] = [
         imageName: "default",
         liveLink: null,
         name: "Happy Harmony",
-        position: 3,
+        position: 5,
         type: "project",
     },
     {
@@ -62,18 +82,8 @@ export const projects: Project[] = [
         imageName: "previous-portfolio",
         liveLink: null,
         name: "Previous Portfolio",
-        position: 4,
+        position: 6,
         type: "project",
-    },
-    {
-        description:
-            "Javascript, React, Redux Toolkit, RTK Query, Node, Express.js, styled-components, MongoDB, Auth0, Python, Django, PostgreSQL, Heroku",
-        id: crypto.randomUUID(),
-        imageName: "bttn",
-        name: "Bttn",
-        position: 5,
-        title: "Software Engineer II",
-        type: "job",
     },
     {
         codeLink: null,
@@ -82,7 +92,7 @@ export const projects: Project[] = [
         imageName: "import-from",
         liveLink: "https://importfrom.dev",
         name: "import/from Blog",
-        position: 6,
+        position: 7,
         type: "project",
     },
 ];

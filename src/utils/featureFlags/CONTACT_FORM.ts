@@ -1,7 +1,7 @@
 import { get } from "@vercel/edge-config";
 import { flag } from "@vercel/flags/next";
 
-import type { FeatureFlags } from "@/types";
+import type { FeatureFlags } from "@/types/FeatureFlags";
 
 export const showContactForm = flag<boolean>({
     async decide() {

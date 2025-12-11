@@ -64,7 +64,7 @@ export default function About() {
                     </SkillUsageHeaderStyled>
                     <SkillListStyled data-testid={testIds.skillList}>
                         {skills.dailyUsage.map(({ id, skill }) => (
-                            <li key={id} data-testid={testIds.skillListItem}>
+                            <li data-testid={testIds.skillListItem} key={id}>
                                 <p data-testid={testIds.skillListItemText}>{skill}</p>
                             </li>
                         ))}
@@ -74,7 +74,7 @@ export default function About() {
                     </SkillUsageHeaderStyled>
                     <SkillListStyled data-testid={testIds.skillList}>
                         {skills.workedWith.map(({ id, skill }) => (
-                            <li key={id} data-testid={testIds.skillListItem}>
+                            <li data-testid={testIds.skillListItem} key={id}>
                                 <p data-testid={testIds.skillListItemText}>{skill}</p>
                             </li>
                         ))}
@@ -84,7 +84,7 @@ export default function About() {
                     </SkillUsageHeaderStyled>
                     <SkillListStyled data-testid={testIds.skillList}>
                         {skills.experimentedWith.map(({ id, skill }) => (
-                            <li key={id} data-testid={testIds.skillListItem}>
+                            <li data-testid={testIds.skillListItem} key={id}>
                                 <p data-testid={testIds.skillListItemText}>{skill}</p>
                             </li>
                         ))}
@@ -92,13 +92,13 @@ export default function About() {
                 </TextContainerStyled>
                 <ImageContainerStyled data-testid={testIds.imageContainer}>
                     <Image
-                        src={MeAtTMobile}
                         alt="Jacob Andes at T-Mobile Park with the 2023 Winter Classic ice rink in the background."
-                        priority
-                        fill
-                        sizes="80vw"
-                        style={{ objectFit: "contain" }}
                         data-testid={testIds.image}
+                        fill
+                        priority
+                        sizes="80vw"
+                        src={MeAtTMobile}
+                        style={{ objectFit: "contain" }}
                     />
                 </ImageContainerStyled>
             </ContentStyled>

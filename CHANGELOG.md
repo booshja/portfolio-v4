@@ -1,3 +1,31 @@
+### 2.3.0 (2025-12-11)
+
+##### Chores
+
+* **eslint:**
+  *  remove legacy .eslintrc.json (5b640450)
+  *  migrate to flat config, add perfectionist, relax a few strict rules, fix lints; remove .eslintignore (aeeb0414)
+  *  remove typescript-sort-keys plugin/rules incompatible with ESLint 9 (402617ea)
+*  enforce Node 22 with Volta, upgrade deps, move to Zod v4 and dynamic date defaults (5557aa7a)
+
+##### Documentation Changes
+
+*  update upgrade plan for Volta, enforce Node 22, and Zod v4 migration (3a5c7f42)
+
+##### Bug Fixes
+
+*  use new @vercel/flags next export; remove deprecated instrumentationHook (ce1826ca)
+
+##### Tests
+
+* **contact:**  await server component before render to fix async error (c142f32f)
+*  add path alias mapper for '@/'; fix module resolution in tests (0d270f08)
+*  adjust coverage thresholds post-upgrade; ESM transforms and mocks in place (a25dd928)
+*  mock featureFlags barrel export instead of deep path for stability (fed610cd)
+*  mock showContactForm as jest.fn to avoid spy redefine errors (4fe476fd)
+*  adjust mock unstable_flag to return async function to allow spying (2665c6e7)
+*  transform jose/@vercel packages for Jest; add mocks for @vercel flags and edge-config (bb4b6078)
+
 ### 2.2.0 (2024-12-07)
 
 ##### Chores

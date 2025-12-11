@@ -2,7 +2,7 @@
 
 import type { Project } from "@/app/experience/_projects";
 
-import { ProjectCard } from "../ProjectCard";
+import { ProjectCard } from "../ProjectCard/ProjectCard";
 
 interface ProjectCardProps {
     projects: Project[];

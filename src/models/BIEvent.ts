@@ -1,6 +1,6 @@
-import mongoose, { Schema, model } from "mongoose";
+import mongoose, { Schema, model, type Model } from "mongoose";
 
-import type { BIEvent as BIEventType } from "@/types";
+import type { BIEvent as BIEventType } from "@/types/BiEvent";
 
 const BIEventSchema = new Schema<BIEventType>(
     {
@@ -41,6 +41,7 @@ const BIEventSchema = new Schema<BIEventType>(
 );
 
 const BIEvent =
-    mongoose.models?.BIEvent || model<BIEventType>("BIEvent", BIEventSchema);
+    (mongoose.models?.BIEvent as Model<BIEventType>) ||
+    model<BIEventType>("BIEvent", BIEventSchema);
 
 export default BIEvent;

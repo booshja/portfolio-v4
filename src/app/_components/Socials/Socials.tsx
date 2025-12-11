@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import Github from "@/public/icons/github-white.svg";
-import LinkedIn from "@/public/icons/linkedin-white.svg";
+const GITHUB_SRC = "/icons/github-white.svg" as const;
+const LINKEDIN_SRC = "/icons/linkedin-white.svg" as const;
 import testingIds from "@/testing/testingIds";
 import { breakpoints, spacing, strings } from "@/utils/constants";
 
@@ -28,29 +28,29 @@ export const Socials = ({ horizontal = false }: SocialsProps) => {
             <SocialsTextStyled data-testid={testIds.text}>find me</SocialsTextStyled>
             <SocialsDividerStyled data-testid={testIds.divider} />
             <SocialsLinkStyled
+                data-testid={testIds.link}
                 href={githubUrl}
                 target="_blank"
-                data-testid={testIds.link}
             >
                 <Image
-                    src={Github}
-                    fill
-                    sizes={`(max-width: ${breakpoints.mobileLg}px) ${spacing.xl}px, ${spacing.xxl}px`}
                     alt="Github profile"
                     data-testid={testIds.icon}
+                    fill
+                    sizes={`(max-width: ${breakpoints.mobileLg}px) ${spacing.xl}px, ${spacing.xxl}px`}
+                    src={GITHUB_SRC}
                 />
             </SocialsLinkStyled>
             <SocialsLinkStyled
+                data-testid={testIds.link}
                 href={linkedInUrl}
                 target="_blank"
-                data-testid={testIds.link}
             >
                 <Image
-                    src={LinkedIn}
-                    fill
-                    sizes={`(max-width: ${breakpoints.mobileLg}px) ${spacing.xl}px, ${spacing.xxl}px`}
                     alt="LinkedIn profile"
                     data-testid={testIds.icon}
+                    fill
+                    sizes={`(max-width: ${breakpoints.mobileLg}px) ${spacing.xl}px, ${spacing.xxl}px`}
+                    src={LINKEDIN_SRC}
                 />
             </SocialsLinkStyled>
         </SocialsContainerStyled>

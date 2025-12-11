@@ -1,4 +1,4 @@
-export default {
+const testingIds = {
     components: {
         copyright: {
             footer: "copyright-footer",
@@ -129,3 +129,5 @@ export default {
         },
     },
 };
+
+export default testingIds;

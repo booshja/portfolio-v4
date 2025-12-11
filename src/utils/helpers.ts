@@ -1,4 +1,4 @@
-import { StaticImageData } from "next/image";
+import type { StaticImageData } from "next/image";
 
 import type { ImageName } from "@/app/experience/_projects";
 import BttnLogo from "@/public/images/bttn-logo.jpeg";

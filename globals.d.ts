@@ -1,5 +1,5 @@
 import type { Mongoose } from "mongoose";
-
+import type { StaticImageData } from "next/image";
 namespace NodeJS {
     interface ProcessEnv {
         DB_USERNAME: string;
@@ -15,4 +15,9 @@ declare global {
         conn: Mongoose | null;
         promise: Promise<Mongoose> | null;
     };
+}
+
+declare module "*.svg" {
+    const content: StaticImageData;
+    export default content;
 }

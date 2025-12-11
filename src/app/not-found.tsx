@@ -40,17 +40,17 @@ export default function NotFound() {
             <NotFoundTextStyled data-testid={testIds.text}>
                 Seems we got lost&hellip;
             </NotFoundTextStyled>
-            <NotFoundLinkStyled href="/" data-testid={testIds.link}>
+            <NotFoundLinkStyled data-testid={testIds.link} href="/">
                 Go back home
             </NotFoundLinkStyled>
             <NotFoundImageContainerStyled>
                 <Image
-                    src={Maps}
                     alt="A stack of different maps"
-                    priority
-                    fill
-                    style={{ objectFit: "contain" }}
                     data-testid={testIds.image}
+                    fill
+                    priority
+                    src={Maps}
+                    style={{ objectFit: "contain" }}
                 />
             </NotFoundImageContainerStyled>
         </NotFoundContainerStyled>

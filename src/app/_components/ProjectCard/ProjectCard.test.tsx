@@ -3,7 +3,7 @@ import { screen, render } from "@testing-library/react";
 import type { Project } from "@/app/experience/_projects";
 import testingIds from "@/testing/testingIds";
 
-import { ProjectCard } from "./";
+import { ProjectCard } from "./ProjectCard";
 
 const testIds = testingIds.components.projectCard;
 

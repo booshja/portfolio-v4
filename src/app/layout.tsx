@@ -4,7 +4,9 @@ import PlausibleProvider from "next-plausible";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
-import { ConsoleLog, Copyright, Navbar } from "@/components/index";
+import { ConsoleLog } from "@/components/ConsoleLog/ConsoleLog";
+import { Copyright } from "@/components/Copyright/Copyright";
+import { Navbar } from "@/components/Nav/Navbar/Navbar";
 import StyledComponentsRegistry from "@/lib/registry";
 
 const inter = Inter({ subsets: ["latin"] });

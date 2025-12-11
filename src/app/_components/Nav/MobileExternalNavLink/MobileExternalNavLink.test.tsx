@@ -8,7 +8,7 @@ const testIds = testingIds.components.mobileExternalNavLink;
 
 describe("ExternalLink component", () => {
     it("should render the component correctly", () => {
-        render(<MobileExternalNavLink href="test" text="test" testId="test" />);
+        render(<MobileExternalNavLink href="test" testId="test" text="test" />);
 
         expect(screen.getByTestId("test")).toBeInTheDocument();
         expect(screen.getByText("test")).toBeInTheDocument();

@@ -3,9 +3,9 @@
 import testingIds from "@/testing/testingIds";
 import { strings } from "@/utils/constants";
 
-import { Copyright } from "../../Copyright";
-import { Socials } from "../../Socials";
-import { MobileExternalNavLink } from "../MobileExternalNavLink";
+import { Copyright } from "../../Copyright/Copyright";
+import { Socials } from "../../Socials/Socials";
+import { MobileExternalNavLink } from "../MobileExternalNavLink/MobileExternalNavLink";
 import {
     ClosingButtonStyled,
     ContainerStyled,
@@ -25,41 +25,41 @@ const testIds = testingIds.components.nav.mobileNav;
 export const MobileNav = ({ handleMenuClose, isOpen }: MobileNavProps) => (
     <ContainerStyled $isOpen={isOpen} data-testid={testIds.container}>
         <ClosingButtonStyled
-            onClick={handleMenuClose}
             data-testid={testIds.closingButton}
+            onClick={handleMenuClose}
         >
             X
         </ClosingButtonStyled>
-        <LogoStyled href="/" data-testid={testIds.logo}>
+        <LogoStyled data-testid={testIds.logo} href="/">
             Jacob Andes - Software Engineer
         </LogoStyled>
         <nav data-testid={testIds.nav}>
             <NavListStyled data-testid={testIds.navList}>
                 <NavItemStyled data-testid={testIds.navItem}>
-                    <NavLinkStyled href="/experience" data-testid={testIds.navLink}>
+                    <NavLinkStyled data-testid={testIds.navLink} href="/experience">
                         experience
                     </NavLinkStyled>
                 </NavItemStyled>
                 <NavItemStyled data-testid={testIds.navItem}>
-                    <NavLinkStyled href="/about" data-testid={testIds.navLink}>
+                    <NavLinkStyled data-testid={testIds.navLink} href="/about">
                         about/skills
                     </NavLinkStyled>
                 </NavItemStyled>
                 <NavItemStyled data-testid={testIds.navItem}>
-                    <NavLinkStyled href="/contact" data-testid={testIds.navLink}>
+                    <NavLinkStyled data-testid={testIds.navLink} href="/contact">
                         contact
                     </NavLinkStyled>
                 </NavItemStyled>
                 <NavItemStyled data-testid={testIds.navItem}>
-                    <NavLinkStyled href="/uses" data-testid={testIds.navLink}>
+                    <NavLinkStyled data-testid={testIds.navLink} href="/uses">
                         uses
                     </NavLinkStyled>
                 </NavItemStyled>
                 <NavItemStyled data-testid={testIds.navItem}>
                     <MobileExternalNavLink
                         href={strings.blogUrl}
-                        text="blog"
                         testId={testIds.navLink}
+                        text="blog"
                     />
                 </NavItemStyled>
             </NavListStyled>

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import testingIds from "@/testing/testingIds";
 
-import { ProjectsList } from "../_components";
+import { ProjectsList } from "../_components/ProjectsList/ProjectsList";
 import { ExpPageContainerStyled, ExpPageHeaderStyled } from "./_pageStyled";
 import { projects } from "./_projects";
 
