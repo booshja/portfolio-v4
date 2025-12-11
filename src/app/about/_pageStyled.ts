@@ -1,7 +1,9 @@
 "use client";
 
 import styled from "styled-components";
+
 import { spacing, colors, lineHeight, breakpoints } from "@/utils/constants";
+
 import { PageContainerStyled, animations } from "../GlobalStyled";
 
 export const AboutPageContainerStyled = styled(PageContainerStyled)`

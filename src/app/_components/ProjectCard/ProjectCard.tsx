@@ -1,6 +1,10 @@
-import { ExternalLink } from "../ExternalLink";
 import Image from "next/image";
+
+import type { Project } from "@/app/experience/_projects";
 import testingIds from "@/testing/testingIds";
+import { getProjectImage } from "@/utils/helpers";
+
+import { ExternalLink } from "../ExternalLink/ExternalLink";
 import {
     CardStyled,
     DescriptionStyled,
@@ -12,23 +16,19 @@ import {
     PositionStyled,
     TextSectionStyled,
 } from "./ProjectCardStyled";
-import type { Project } from "@/app/experience/_projects";
-import { getProjectImage } from "@/utils/helpers";
-
-interface ProjectCardProps extends Project {}
 
 const testIds = testingIds.components.projectCard;
 
 export const ProjectCard = ({
-    name,
-    position,
-    type,
     codeLink,
-    liveLink,
-    title,
     description,
     imageName,
-}: ProjectCardProps) => {
+    liveLink,
+    name,
+    position,
+    title,
+    type,
+}: Project) => {
     const reverseAlignment = position % 2 === 0;
 
     const imageSrc = getProjectImage(imageName);
@@ -38,36 +38,36 @@ export const ProjectCard = ({
             return (
                 <>
                     <ExternalLink
-                        href={codeLink}
-                        text="Code"
                         card
+                        href={codeLink}
                         testId={testIds.codeLink}
+                        text="Code"
                     />
                     {" | "}
                     <ExternalLink
-                        href={liveLink}
-                        text="Live"
                         card
+                        href={liveLink}
                         testId={testIds.liveLink}
+                        text="Live"
                     />
                 </>
             );
         } else if (codeLink && !liveLink) {
             return (
                 <ExternalLink
-                    href={codeLink}
-                    text="Code"
                     card
+                    href={codeLink}
                     testId={testIds.codeLink}
+                    text="Code"
                 />
             );
         } else if (liveLink) {
             return (
                 <ExternalLink
-                    href={liveLink}
-                    text="Live"
                     card
+                    href={liveLink}
                     testId={testIds.liveLink}
+                    text="Live"
                 />
             );
         }
@@ -80,17 +80,17 @@ export const ProjectCard = ({
                 data-testid={testIds.imageSection}
             >
                 <Image
-                    src={imageSrc}
                     alt={name}
-                    priority={position === 1}
+                    data-testid={testIds.image}
                     fill
+                    priority={position === 1}
                     sizes="80vw"
+                    src={imageSrc}
                     style={{
-                        objectFit: "cover",
                         boxShadow:
                             "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px",
+                        objectFit: "cover",
                     }}
-                    data-testid={testIds.image}
                 />
             </ImageSectionStyled>
             <TextSectionStyled data-testid={testIds.textSection}>

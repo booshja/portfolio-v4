@@ -1,18 +1,27 @@
 import { screen, render } from "@testing-library/react";
-import ContactPage from "./page";
+
 import testingIds from "@/testing/testingIds";
 import * as contactFormFlag from "@/utils/featureFlags/CONTACT_FORM";
+
+import ContactPage from "./page";
+jest.mock("@/utils/featureFlags/CONTACT_FORM", () => ({
+    __esModule: true,
+    showContactForm: jest.fn(),
+}));
 
 const testIds = testingIds.pages.contact;
 
 describe("Contact Page", () => {
     describe("when the CONTACT_FORM feature flag is off", () => {
         beforeEach(() => {
-            jest.spyOn(contactFormFlag, "showContactForm").mockResolvedValue(false);
+            (contactFormFlag.showContactForm as unknown as jest.Mock).mockResolvedValue(
+                false
+            );
         });
 
-        it("should render the page correctly", () => {
-            render(<ContactPage />);
+        it("should render the page correctly", async () => {
+            const ui = await ContactPage();
+            render(ui);
 
             expect(screen.getByTestId(testIds.container)).toBeInTheDocument();
 

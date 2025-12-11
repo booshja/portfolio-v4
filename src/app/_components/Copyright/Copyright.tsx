@@ -1,4 +1,5 @@
 import testingIds from "@/testing/testingIds";
+
 import { CopyrightFooterStyled, CopyrightTextStyled } from "./CopyrightStyled";
 
 const testIds = testingIds.components.copyright;

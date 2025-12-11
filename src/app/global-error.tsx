@@ -1,38 +1,39 @@
 "use client";
 
-import Link from "next/link";
-import { colors, spacing } from "@/utils/constants";
-import SadIceCream from "@/public/images/sad-ice-cream.jpeg";
-import Image from "next/image";
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+
+import SadIceCream from "@/public/images/sad-ice-cream.jpeg";
+import { colors, spacing } from "@/utils/constants";
 
 export const metadata: Metadata = {
-    title: "Something went wrong",
     robots: {
-        index: false,
         follow: false,
-        nocache: false,
         googleBot: {
-            index: false,
             follow: false,
-            noimageindex: true,
-            "max-video-preview": -1,
+            index: false,
             "max-image-preview": "none",
             "max-snippet": -1,
+            "max-video-preview": -1,
+            noimageindex: true,
         },
+        index: false,
+        nocache: false,
     },
+    title: "Something went wrong",
 };
 
-export default function Error(error: Error & { digest?: string }) {
+export default function Error(_error: Error & { digest?: string }) {
     return (
         <div
             style={{
-                height: "100dvh",
-                width: "100dvw",
+                alignItems: "center",
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "center",
+                height: "100dvh",
                 padding: spacing.md + "px",
+                width: "100dvw",
             }}
         >
             <h1 style={{ color: colors.text, textAlign: "center" }}>
@@ -45,14 +46,14 @@ export default function Error(error: Error & { digest?: string }) {
                 Go back home
             </Link>
             <div
-                style={{ position: "relative", width: "80vw", aspectRatio: "1.5 / 1" }}
+                style={{ aspectRatio: "1.5 / 1", position: "relative", width: "80vw" }}
             >
                 <Image
-                    src={SadIceCream}
-                    priority
-                    fill
-                    style={{ objectFit: "contain" }}
                     alt="A dropped waffle cone ice cream cone on a slab of rock with ice cream spilled out of it."
+                    fill
+                    priority
+                    src={SadIceCream}
+                    style={{ objectFit: "contain" }}
                 />
             </div>
         </div>

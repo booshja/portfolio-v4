@@ -1,6 +1,8 @@
 import { screen, render } from "@testing-library/react";
-import UsesPage from "./page";
+
 import testingIds from "@/testing/testingIds";
+
+import UsesPage from "./page";
 
 const testIds = testingIds.pages.uses;
 
@@ -27,7 +29,7 @@ describe("Uses Page", () => {
         );
         expect(
             screen.getAllByTestId(testIds.softwareListItemExternalLink)
-        ).toHaveLength(5);
+        ).toHaveLength(4);
 
         expect(screen.getByTestId(testIds.hardwareSectionHeader)).toBeInTheDocument();
         expect(screen.getByTestId(testIds.hardwareList)).toBeInTheDocument();

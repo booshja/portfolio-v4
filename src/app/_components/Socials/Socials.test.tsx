@@ -1,6 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import { Socials } from "./";
+
 import testingIds from "@/testing/testingIds";
+
+import { Socials } from "./Socials";
 
 const testIds = testingIds.components.socials;
 

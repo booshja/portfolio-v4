@@ -1,8 +1,9 @@
+import type { NextRequest } from "next/server";
+
 import { connectDB } from "@/lib/mongodb";
 import Contact from "@/models/Contact";
-import { ContactRequestSchema } from "@/types";
+import { ContactRequestSchema } from "@/types/Contact";
 import { checkAuthHeader } from "@/utils/checkAuthHeader";
-import type { NextRequest } from "next/server";
 
 export const POST = async (request: NextRequest) => {
     const headers = new Headers(request.headers);
@@ -12,7 +13,7 @@ export const POST = async (request: NextRequest) => {
         return Response.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const requestData = await request.json();
+    const requestData: unknown = await request.json();
     const validatedData = ContactRequestSchema.safeParse(requestData);
 
     if (!validatedData.success) {
@@ -28,8 +29,7 @@ export const POST = async (request: NextRequest) => {
     const contactData = validatedData.data;
 
     try {
-        const contact = new Contact(contactData);
-        await contact.save();
+        await Contact.create(contactData);
     } catch (error) {
         return Response.json({ error: "Error creating contact" }, { status: 500 });
     }

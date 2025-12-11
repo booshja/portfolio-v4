@@ -1,6 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import ExperiencePage from "./page";
+
 import testingIds from "@/testing/testingIds";
+
+import ExperiencePage from "./page";
 
 const testIds = testingIds.pages.experience;
 
@@ -13,6 +15,6 @@ describe("Experience Page", () => {
         expect(screen.getByTestId(testIds.header)).toHaveTextContent("Experience");
         expect(
             screen.getAllByTestId(testingIds.components.projectCard.container)
-        ).toHaveLength(6);
+        ).toHaveLength(7);
     });
 });

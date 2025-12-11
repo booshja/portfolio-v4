@@ -1,5 +1,7 @@
 "use client";
 
+import styled from "styled-components";
+
 import {
     colors,
     spacing,
@@ -7,7 +9,6 @@ import {
     fontWeight,
     breakpoints,
 } from "@/utils/constants";
-import styled from "styled-components";
 
 interface ExternalLinkStyledProps {
     $inline: boolean;

@@ -1,8 +1,10 @@
 "use client";
 
 import styled from "styled-components";
-import { PageContainerStyled, animations } from "../GlobalStyled";
+
 import { breakpoints, colors, lineHeight, spacing } from "@/utils/constants";
+
+import { PageContainerStyled, animations } from "../GlobalStyled";
 
 export const UsesPageContainerStyled = styled(PageContainerStyled)`
     display: flex;

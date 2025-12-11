@@ -1,6 +1,7 @@
 "use client";
 
 import styled from "styled-components";
+
 import { spacing, lineHeight, colors } from "@/utils/constants";
 
 export const TooltipTextStyled = styled.span`

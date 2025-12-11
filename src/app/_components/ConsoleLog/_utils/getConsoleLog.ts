@@ -5,11 +5,11 @@ export const getConsoleLog = () => {
     let string = "\n\n";
     for (let y = -p; ++y < p; ) {
         for (let x = -r; ++x < r; ) {
-            let d = c(y, r * 2, p);
-            let e = c(y + q, r / 5, q);
-            let f = e - p;
-            let g = e + p;
-            let h = c(y, r * 1.3, r / 3);
+            const d = c(y, r * 2, p);
+            const e = c(y + q, r / 5, q);
+            const f = e - p;
+            const g = e + p;
+            const h = c(y, r * 1.3, r / 3);
             string +=
                 x >= d ||
                 x <= -d ||

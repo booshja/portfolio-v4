@@ -1,13 +1,13 @@
 "use client";
 
+import styled from "styled-components";
+
 import {
     breakpoints,
     colors,
     fontWeight,
-    lineHeight,
     spacing,
 } from "@/utils/constants";
-import styled from "styled-components";
 
 interface InfoTooltipStyledProps {
     $visible: boolean;

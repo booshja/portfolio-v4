@@ -1,12 +1,14 @@
 import { render, screen } from "@testing-library/react";
-import { MobileNav } from "./";
+
 import testingIds from "@/testing/testingIds";
+
+import { MobileNav } from "./MobileNav";
 
 const testIds = testingIds.components.nav.mobileNav;
 
 describe("MobileNav component", () => {
     it("renders the MobileNav component correctly", () => {
-        render(<MobileNav isOpen handleMenuClose={() => undefined} />);
+        render(<MobileNav handleMenuClose={() => undefined} isOpen />);
 
         expect(screen.getByTestId(testIds.container)).toBeInTheDocument();
         expect(screen.getByTestId(testIds.closingButton)).toBeInTheDocument();

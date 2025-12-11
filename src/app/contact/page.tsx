@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+
+import PenAndPaper from "@/public/images/calligraphy-pen-paper.jpeg";
 import testingIds from "@/testing/testingIds";
+import { strings } from "@/utils/constants";
+import { showContactForm } from "@/utils/featureFlags/CONTACT_FORM";
+
+import { CopyTextButton } from "../_components/CopyTextButton/CopyTextButton";
+import { ExternalLink } from "../_components/ExternalLink/ExternalLink";
 import {
     ContactPageContainerStyled,
     ContactInfoContainerStyled,
@@ -9,20 +18,14 @@ import {
     PageHeaderStyled,
     SubHeaderStyled,
 } from "./_pageStyled";
-import { CopyTextButton, ExternalLink } from "../_components";
-import { strings } from "@/utils/constants";
-import Image from "next/image";
-import PenAndPaper from "@/public/images/calligraphy-pen-paper.jpeg";
-import { showContactForm } from "@/utils/featureFlags";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Contact - Jacob Andes",
     description: "Contact Jacob Andes, software engineer based in the United States.",
+    title: "Contact - Jacob Andes",
 };
 
 const testIds = testingIds.pages.contact;
-const { contactEmail, linkedInUrl, githubUrl } = strings;
+const { contactEmail, githubUrl, linkedInUrl } = strings;
 
 export default async function Contact() {
     // * Find edge config feature flag url in .env.local
@@ -56,8 +59,8 @@ export default async function Contact() {
                         </SubHeaderStyled>
                         <CopyTextButton
                             copyText={contactEmail}
-                            text={contactEmail}
                             testId={testIds.copyContactInfoButton}
+                            text={contactEmail}
                         />
                         <SubHeaderStyled data-testid={testIds.linksHeader}>
                             On the web
@@ -67,24 +70,24 @@ export default async function Contact() {
                         >
                             <ExternalLink
                                 href={linkedInUrl}
-                                text="LinkedIn"
                                 testId={testIds.externalLink}
+                                text="LinkedIn"
                             />
                             <ExternalLink
                                 href={githubUrl}
-                                text="GitHub"
                                 testId={testIds.externalLink}
+                                text="GitHub"
                             />
                         </ExternalLinkContainerStyled>
                     </ContactInfoContainerStyled>
                     <ImageContainerStyled data-testid={testIds.imageContainer}>
                         <Image
-                            src={PenAndPaper}
+                            alt="Calligraphy pen and pen lid on top of a notebook containing white pages and non-discernable black cursive writing on top of a dark-colored table."
                             data-testid={testIds.image}
                             fill
-                            style={{ objectFit: "contain" }}
                             priority
-                            alt="Calligraphy pen and pen lid on top of a notebook containing white pages and non-discernable black cursive writing on top of a dark-colored table."
+                            src={PenAndPaper}
+                            style={{ objectFit: "contain" }}
                         />
                     </ImageContainerStyled>
                 </>

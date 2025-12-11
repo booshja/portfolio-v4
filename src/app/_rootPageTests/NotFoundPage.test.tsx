@@ -1,6 +1,8 @@
 import { screen, render } from "@testing-library/react";
-import NotFoundPage from "../not-found";
+
 import testingIds from "@/testing/testingIds";
+
+import NotFoundPage from "../not-found";
 
 const testIds = testingIds.pages.notFound;
 

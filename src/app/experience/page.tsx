@@ -1,13 +1,15 @@
-import testingIds from "@/testing/testingIds";
-import { projects } from "./_projects";
-import { ExpPageContainerStyled, ExpPageHeaderStyled } from "./_pageStyled";
-import { ProjectsList } from "../_components";
 import type { Metadata } from "next";
 
+import testingIds from "@/testing/testingIds";
+
+import { ProjectsList } from "../_components/ProjectsList/ProjectsList";
+import { ExpPageContainerStyled, ExpPageHeaderStyled } from "./_pageStyled";
+import { projects } from "./_projects";
+
 export const metadata: Metadata = {
-    title: "Experience - Jacob Andes",
     description:
         "Experience for Jacob Andes, software engineer based in the United States.",
+    title: "Experience - Jacob Andes",
 };
 
 const testIds = testingIds.pages.experience;

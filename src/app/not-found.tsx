@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+
+import Maps from "@/public/images/maps.jpeg";
+import testingIds from "@/testing/testingIds";
+
 import {
     NotFoundContainerStyled,
     NotFoundHeaderStyled,
@@ -5,26 +11,22 @@ import {
     NotFoundLinkStyled,
     NotFoundTextStyled,
 } from "./NotFoundStyled";
-import Maps from "@/public/images/maps.jpeg";
-import Image from "next/image";
-import testingIds from "@/testing/testingIds";
-import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Not Found",
     robots: {
-        index: false,
         follow: false,
-        nocache: false,
         googleBot: {
-            index: false,
             follow: false,
-            noimageindex: true,
-            "max-video-preview": -1,
+            index: false,
             "max-image-preview": "none",
             "max-snippet": -1,
+            "max-video-preview": -1,
+            noimageindex: true,
         },
+        index: false,
+        nocache: false,
     },
+    title: "Not Found",
 };
 
 const testIds = testingIds.pages.notFound;
@@ -38,17 +40,17 @@ export default function NotFound() {
             <NotFoundTextStyled data-testid={testIds.text}>
                 Seems we got lost&hellip;
             </NotFoundTextStyled>
-            <NotFoundLinkStyled href="/" data-testid={testIds.link}>
+            <NotFoundLinkStyled data-testid={testIds.link} href="/">
                 Go back home
             </NotFoundLinkStyled>
             <NotFoundImageContainerStyled>
                 <Image
-                    src={Maps}
                     alt="A stack of different maps"
-                    priority
-                    fill
-                    style={{ objectFit: "contain" }}
                     data-testid={testIds.image}
+                    fill
+                    priority
+                    src={Maps}
+                    style={{ objectFit: "contain" }}
                 />
             </NotFoundImageContainerStyled>
         </NotFoundContainerStyled>

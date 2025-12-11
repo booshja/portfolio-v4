@@ -1,10 +1,12 @@
 import Image from "next/image";
-import ExternalLinkImage from "@/public/icons/external-link.svg";
+
+const EXTERNAL_LINK_SRC = "/icons/external-link.svg" as const;
+import testingIds from "@/testing/testingIds";
+
 import {
     MobileExternalNavLinkStyled,
     ImageContainerStyled,
 } from "./MobileExternalNavLinkStyled";
-import testingIds from "@/testing/testingIds";
 
 interface MobileExternalNavLinkProps {
     href: string;
@@ -16,18 +18,19 @@ const testIds = testingIds.components.mobileExternalNavLink;
 
 export const MobileExternalNavLink = ({
     href,
-    text,
     testId,
+    text,
 }: MobileExternalNavLinkProps) => (
-    <MobileExternalNavLinkStyled href={href} target="_blank" data-testid={testId}>
+    <MobileExternalNavLinkStyled data-testid={testId} href={href} target="_blank">
         {text}
         <ImageContainerStyled>
             <Image
-                src={ExternalLinkImage}
                 alt="Link opens in external tab"
-                fill
-                style={{ objectFit: "contain", aspectRatio: "1/1" }}
                 data-testid={testIds.image}
+                fill
+                sizes="24px"
+                src={EXTERNAL_LINK_SRC}
+                style={{ aspectRatio: "1/1", objectFit: "contain" }}
             />
         </ImageContainerStyled>
     </MobileExternalNavLinkStyled>

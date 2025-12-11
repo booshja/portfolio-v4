@@ -1,6 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+
+const MOUNTAIN_SRC = "/icons/mountain-dark.svg" as const;
+import testingIds from "@/testing/testingIds";
+import { breakpoints, spacing, strings } from "@/utils/constants";
+
+import { MobileNav } from "../MobileNav/MobileNav";
+import { NavLink } from "../NavLink/NavLink";
 import {
     LogoStyled,
     MobileNavButton,
@@ -9,13 +18,6 @@ import {
     NavSectionStyled,
     NavListStyled,
 } from "./NavbarStyled";
-import { NavLink } from "../";
-import Image from "next/image";
-import Mountain from "@/public/icons/mountain-dark.svg";
-import testingIds from "@/testing/testingIds";
-import { breakpoints, spacing, strings } from "@/utils/constants";
-import { MobileNav } from "../MobileNav";
-import { useState, useEffect } from "react";
 
 const testIds = testingIds.components.nav.navbar;
 
@@ -34,7 +36,7 @@ export const Navbar = () => {
 
     return (
         <NavbarStyled data-testid={testIds.container}>
-            <LogoStyled href="/" data-testid={testIds.logo}>
+            <LogoStyled data-testid={testIds.logo} href="/">
                 Jacob Andes
             </LogoStyled>
             <NavSectionStyled data-testid={testIds.navSection}>
@@ -43,62 +45,62 @@ export const Navbar = () => {
                         <NavItemStyled data-testid={testIds.navItem}>
                             <NavLink
                                 href="/experience"
-                                text="experience"
                                 pathname={pathname}
                                 testId={testIds.navLink}
+                                text="experience"
                             />
                         </NavItemStyled>
                         <NavItemStyled data-testid={testIds.navItem}>
                             <NavLink
                                 href="/about"
-                                text="about/skills"
                                 pathname={pathname}
                                 testId={testIds.navLink}
+                                text="about/skills"
                             />
                         </NavItemStyled>
                         <NavItemStyled data-testid={testIds.navItem}>
                             <NavLink
                                 href="/contact"
-                                text="contact"
                                 pathname={pathname}
                                 testId={testIds.navLink}
+                                text="contact"
                             />
                         </NavItemStyled>
                         <NavItemStyled data-testid={testIds.navItem}>
                             <NavLink
                                 href="/uses"
-                                text="uses"
                                 pathname={pathname}
                                 testId={testIds.navLink}
+                                text="uses"
                             />
                         </NavItemStyled>
                         <NavItemStyled data-testid={testIds.navItem}>
                             <NavLink
-                                href={strings.blogUrl}
-                                text="blog"
-                                testId={testIds.navLink}
                                 external
+                                href={strings.blogUrl}
+                                testId={testIds.navLink}
+                                text="blog"
                             />
                         </NavItemStyled>
                     </NavListStyled>
                 </nav>
                 <MobileNavButton
-                    onClick={handleMobileMenuChange}
                     data-testid={testIds.navButton}
+                    onClick={handleMobileMenuChange}
                 >
                     <Image
-                        src={Mountain}
                         alt="Mountain that opens mobile menu"
+                        data-testid={testIds.navButtonImage}
                         fill
                         sizes={`(max-width: ${breakpoints.mobileLg}) ${spacing.lg}px, ${spacing.xl}px`}
-                        style={{ objectFit: "contain", aspectRatio: "1/1" }}
-                        data-testid={testIds.navButtonImage}
+                        src={MOUNTAIN_SRC}
+                        style={{ aspectRatio: "1/1", objectFit: "contain" }}
                     />
                 </MobileNavButton>
             </NavSectionStyled>
             <MobileNav
-                isOpen={isMobileMenuOpen}
                 handleMenuClose={handleMobileMenuChange}
+                isOpen={isMobileMenuOpen}
             />
         </NavbarStyled>
     );

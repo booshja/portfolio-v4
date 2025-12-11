@@ -1,8 +1,9 @@
 "use client";
 
-import { colors, spacing, fontWeight, breakpoints } from "@/utils/constants";
 import Link from "next/link";
 import styled from "styled-components";
+
+import { colors, spacing, fontWeight } from "@/utils/constants";
 
 interface NextNavLinkStyledProps {
     $active: boolean;

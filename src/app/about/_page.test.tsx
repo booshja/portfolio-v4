@@ -1,6 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import AboutPage from "./page";
+
 import testingIds from "@/testing/testingIds";
+
+import AboutPage from "./page";
 
 const testIds = testingIds.pages.about;
 

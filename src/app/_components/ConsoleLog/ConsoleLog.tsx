@@ -1,6 +1,6 @@
 "use client";
 
-import { getConsoleLog } from "./_utils";
+import { getConsoleLog } from "./_utils/getConsoleLog";
 
 export const ConsoleLog = () => {
     if (process.env.NODE_ENV === "development") {

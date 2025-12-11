@@ -1,8 +1,10 @@
 import Image from "next/image";
-import ExternalLinkImage from "@/public/icons/external-link.svg";
-import ExternalLinkImageBlack from "@/public/icons/external-link-black.svg";
-import { ExternalLinkStyled, ImageContainerStyled } from "./ExternalLinkStyled";
+
+const EXTERNAL_LINK_BLACK_SRC = "/icons/external-link-black.svg" as const;
+const EXTERNAL_LINK_SRC = "/icons/external-link.svg" as const;
 import testingIds from "@/testing/testingIds";
+
+import { ExternalLinkStyled, ImageContainerStyled } from "./ExternalLinkStyled";
 
 interface ExternalLinkProps {
     href: string;
@@ -15,27 +17,28 @@ interface ExternalLinkProps {
 const testIds = testingIds.components.externalLink;
 
 export const ExternalLink = ({
-    href,
-    text,
-    testId,
-    inline = false,
     card = false,
+    href,
+    inline = false,
+    testId,
+    text,
 }: ExternalLinkProps) => (
     <ExternalLinkStyled
+        $card={card}
+        $inline={inline}
+        data-testid={testId}
         href={href}
         target="_blank"
-        data-testid={testId}
-        $inline={inline}
-        $card={card}
     >
         {text}
         <ImageContainerStyled>
             <Image
-                src={card ? ExternalLinkImageBlack : ExternalLinkImage}
                 alt="Link opens in external tab"
-                fill
-                style={{ objectFit: "contain", aspectRatio: "1/1" }}
                 data-testid={testIds.image}
+                fill
+                sizes="24px"
+                src={card ? EXTERNAL_LINK_BLACK_SRC : EXTERNAL_LINK_SRC}
+                style={{ aspectRatio: "1/1", objectFit: "contain" }}
             />
         </ImageContainerStyled>
     </ExternalLinkStyled>

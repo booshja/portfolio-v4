@@ -1,5 +1,7 @@
 "use client";
 
+import styled from "styled-components";
+
 import { animations } from "@/app/GlobalStyled";
 import {
     breakpoints,
@@ -8,7 +10,6 @@ import {
     lineHeight,
     spacing,
 } from "@/utils/constants";
-import styled from "styled-components";
 
 interface ReverseProps {
     $reverse: boolean;

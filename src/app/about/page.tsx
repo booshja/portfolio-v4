@@ -1,7 +1,9 @@
-import testingIds from "@/testing/testingIds";
-import skills from "./_skills";
+import type { Metadata } from "next";
 import Image from "next/image";
+
 import MeAtTMobile from "@/public/images/me-at-tmobile.jpeg";
+import testingIds from "@/testing/testingIds";
+
 import {
     AboutPageContainerStyled,
     ContentStyled,
@@ -16,12 +18,12 @@ import {
     SkillUsageHeaderStyled,
     TextContainerStyled,
 } from "./_pageStyled";
-import type { Metadata } from "next";
+import skills from "./_skills";
 
 export const metadata: Metadata = {
-    title: "About/Skills - Jacob Andes",
     description:
         "About me and skills for Jacob Andes, software engineer based in the United States.",
+    title: "About/Skills - Jacob Andes",
 };
 
 const testIds = testingIds.pages.about;
@@ -61,8 +63,8 @@ export default function About() {
                         Daily Usage
                     </SkillUsageHeaderStyled>
                     <SkillListStyled data-testid={testIds.skillList}>
-                        {skills.dailyUsage.map(({ skill, id }) => (
-                            <li key={id} data-testid={testIds.skillListItem}>
+                        {skills.dailyUsage.map(({ id, skill }) => (
+                            <li data-testid={testIds.skillListItem} key={id}>
                                 <p data-testid={testIds.skillListItemText}>{skill}</p>
                             </li>
                         ))}
@@ -71,8 +73,8 @@ export default function About() {
                         Worked With
                     </SkillUsageHeaderStyled>
                     <SkillListStyled data-testid={testIds.skillList}>
-                        {skills.workedWith.map(({ skill, id }) => (
-                            <li key={id} data-testid={testIds.skillListItem}>
+                        {skills.workedWith.map(({ id, skill }) => (
+                            <li data-testid={testIds.skillListItem} key={id}>
                                 <p data-testid={testIds.skillListItemText}>{skill}</p>
                             </li>
                         ))}
@@ -81,8 +83,8 @@ export default function About() {
                         Experimented With
                     </SkillUsageHeaderStyled>
                     <SkillListStyled data-testid={testIds.skillList}>
-                        {skills.experimentedWith.map(({ skill, id }) => (
-                            <li key={id} data-testid={testIds.skillListItem}>
+                        {skills.experimentedWith.map(({ id, skill }) => (
+                            <li data-testid={testIds.skillListItem} key={id}>
                                 <p data-testid={testIds.skillListItemText}>{skill}</p>
                             </li>
                         ))}
@@ -90,13 +92,13 @@ export default function About() {
                 </TextContainerStyled>
                 <ImageContainerStyled data-testid={testIds.imageContainer}>
                     <Image
-                        src={MeAtTMobile}
                         alt="Jacob Andes at T-Mobile Park with the 2023 Winter Classic ice rink in the background."
-                        priority
-                        fill
-                        sizes="80vw"
-                        style={{ objectFit: "contain" }}
                         data-testid={testIds.image}
+                        fill
+                        priority
+                        sizes="80vw"
+                        src={MeAtTMobile}
+                        style={{ objectFit: "contain" }}
                     />
                 </ImageContainerStyled>
             </ContentStyled>

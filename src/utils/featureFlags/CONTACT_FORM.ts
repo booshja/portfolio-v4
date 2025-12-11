@@ -1,20 +1,21 @@
-import { unstable_flag as flag } from "@vercel/flags/next";
 import { get } from "@vercel/edge-config";
-import type { FeatureFlags } from "@/types";
+import { flag } from "@vercel/flags/next";
+
+import type { FeatureFlags } from "@/types/FeatureFlags";
 
 export const showContactForm = flag<boolean>({
-    key: "CONTACT_FORM",
     async decide() {
         const edgeConfigFlags = await get<FeatureFlags>("flags");
         if (!edgeConfigFlags) return false;
 
         return edgeConfigFlags[this.key as keyof FeatureFlags];
     },
-    description: "Whether or not to show the contact form on the Contact page",
     defaultValue: false,
+    description: "Whether or not to show the contact form on the Contact page",
+    key: "CONTACT_FORM",
     options: [
         // options are not necessary for boolean flags, but we customize their labels here
-        { value: false, label: "Hide" },
-        { value: true, label: "Show" },
+        { label: "Hide", value: false },
+        { label: "Show", value: true },
     ],
 });
