@@ -124,21 +124,6 @@ export default [
             "react/self-closing-comp": "error",
             "react/react-in-jsx-scope": "off",
             "unused-imports/no-unused-imports": "error",
-            // Allow CSS import in Next app root layout
-            ...(true && {
-                "no-restricted-imports": [
-                    "warn",
-                    {
-                        patterns: [
-                            {
-                                group: ["**/dist/"],
-                                message:
-                                    "Deep imports from 'dist' are not allowed. Instead import from the package root.",
-                            },
-                        ],
-                    },
-                ],
-            }),
             "no-useless-escape": "off",
             "@typescript-eslint/no-empty-object-type": "error",
             "@typescript-eslint/require-await": "error",
@@ -164,6 +149,24 @@ export default [
                 { type: "natural", order: "asc" },
             ],
             "perfectionist/sort-enums": ["error", { type: "natural", order: "asc" }],
+        },
+    },
+    // Allow CSS import in Next app root layout while keeping dist restriction
+    {
+        files: ["src/app/layout.tsx"],
+        rules: {
+            "no-restricted-imports": [
+                "warn",
+                {
+                    patterns: [
+                        {
+                            group: ["**/dist/"],
+                            message:
+                                "Deep imports from 'dist' are not allowed. Instead import from the package root.",
+                        },
+                    ],
+                },
+            ],
         },
     },
     {
