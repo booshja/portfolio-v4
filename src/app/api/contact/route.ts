@@ -3,8 +3,16 @@ import type { NextRequest } from "next/server";
 import { connectDB } from "@/lib/mongodb";
 import Contact from "@/models/Contact";
 import { ContactRequestSchema } from "@/types/Contact";
+import { checkAuthHeader } from "@/utils/checkAuthHeader";
 
 export const POST = async (request: NextRequest) => {
+    const headers = new Headers(request.headers);
+    const authorized = checkAuthHeader(headers);
+
+    if (!authorized) {
+        return Response.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
     const requestData: unknown = await request.json();
     const validatedData = ContactRequestSchema.safeParse(requestData);
 

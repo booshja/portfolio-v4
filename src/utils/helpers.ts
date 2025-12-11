@@ -6,7 +6,7 @@ import BttnLogo from "@/public/images/bttn-logo.jpeg";
 import ImagineArtHere from "@/public/images/imagine-art-here-sign.jpeg";
 import ImportFrom from "@/public/images/import-from.png";
 import PortfolioV3 from "@/public/images/portfolio-v3.png";
-// import PortfolioV4 from "@/public/images/portfolio-v4.";
+import PortfolioV4 from "@/public/images/portfolio-v4.jpeg";
 import SmartsheetLogo from "@/public/images/smartsheet-logo.png";
 
 export const getProjectImage = (name: ImageName): StaticImageData => {
@@ -16,9 +16,9 @@ export const getProjectImage = (name: ImageName): StaticImageData => {
         case "smartsheet":
             image = SmartsheetLogo;
             break;
-        // case "portfolio":
-        //     image = PortfolioV4;
-        //     break;
+        case "portfolio":
+            image = PortfolioV4;
+            break;
         // case "happy-harmony":
         //     image = HappyHarmony;
         //     break;

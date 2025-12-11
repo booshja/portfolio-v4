@@ -7,6 +7,7 @@ namespace NodeJS {
         DB_SUBDOMAIN: string;
         DB_NAME: string;
         DB_APP_NAME: string;
+        REQUEST_AUTH_HEADER: string;
     }
 }
 
