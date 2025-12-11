@@ -15,6 +15,6 @@ describe("Experience Page", () => {
         expect(screen.getByTestId(testIds.header)).toHaveTextContent("Experience");
         expect(
             screen.getAllByTestId(testingIds.components.projectCard.container)
-        ).toHaveLength(6);
+        ).toHaveLength(7);
     });
 });

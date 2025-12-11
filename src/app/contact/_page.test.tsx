@@ -4,7 +4,7 @@ import testingIds from "@/testing/testingIds";
 import * as contactFormFlag from "@/utils/featureFlags/CONTACT_FORM";
 
 import ContactPage from "./page";
-jest.mock("@/utils/featureFlags", () => ({
+jest.mock("@/utils/featureFlags/CONTACT_FORM", () => ({
     __esModule: true,
     showContactForm: jest.fn(),
 }));
